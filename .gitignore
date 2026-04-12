@@ -1,0 +1,9 @@
+node_modules/
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+.cache
+.env
+.env.local
+original-backup/

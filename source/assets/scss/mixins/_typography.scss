@@ -1,0 +1,3 @@
+@mixin fluid-value($property, $value, $height: 768) {
+	#{$property}: calc($value / $height) * 100vh;
+}

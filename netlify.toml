@@ -1,0 +1,11 @@
+[build]
+  publish = "build"
+
+# No build command needed - we serve the pre-built static files directly
+# If you later set up the Gulp pipeline, uncomment the line below:
+# command = "npm run build"
+
+[[redirects]]
+  from = "/*"
+  to = "/features-404.html"
+  status = 404

@@ -1,0 +1,84 @@
+//- 404
+//- ----------------------------------------------
+
+.site-layout--landing-error {
+
+	.ncr-page-decor__layer-3 {
+		width: 70%;
+	}
+
+	.error__logo-wrapper {
+		text-align: left;
+	}
+
+		.error__logo {
+			position: absolute;
+			z-index: 1;
+			top: 50%;
+			transform: translateY(-50%);
+			max-width: 100%;
+		}
+
+	.error__txt-wrapper {
+		text-align: left;
+
+		@include media-breakpoint-down(lg) {
+			text-align: center;
+		}
+	}
+
+		.error__title {
+			font-size: $h1-font-size;
+			line-height: .8125em;
+			color: $light;
+			margin-bottom: 0;
+
+			@include media-breakpoint-up(lg) {
+				font-size: 10rem;
+			}
+
+			@media (min-width: $xxl-breakpoint) {
+				font-size: 14rem;
+			}
+		}
+
+		.error__subtitle {
+			font-size: $h3-font-size;
+			line-height: 1em;
+			color: $primary;
+
+			@include media-breakpoint-up(lg) {
+				font-size: 3.75rem;
+			}
+
+			@media (min-width: $xxl-breakpoint) {
+				font-size: 5rem;
+			}
+		}
+
+		.error__desc {
+			color: $body-color-dark;
+			font-size: $font-size-base;
+			line-height: 1.75em;
+
+			@media (min-width: $xxl-breakpoint) {
+				font-size: $font-size-lg;
+			}
+
+			a {
+				font-weight: bold;
+				color: $primary;
+				white-space: nowrap;
+
+				&:hover {
+					color: $light;
+				}
+			}
+
+			p {
+				&:last-child {
+					margin-bottom: 0;
+				}
+			}
+		}
+}
