@@ -1168,52 +1168,8 @@ async function main() {
   }
   console.log(`Fixed paths in ${postFiles.length} post pages`);
 
-  // ── Update home.html news section ──
-  console.log('\nUpdating home.html news feed...');
-  const homePath = path.join(BUILD, 'home.html');
-  if (fs.existsSync(homePath)) {
-    let homeHtml = fs.readFileSync(homePath, 'utf8');
-    const homeArticles = validItems.slice(0, 7).map((item, i) => {
-      const img = item.localImage || PLACEHOLDER_IMGS[i % PLACEHOLDER_IMGS.length];
-      return `\t\t\t\t<article class="post has-post-thumbnail">
-\t\t\t\t\t<div class="post__thumbnail">
-\t\t\t\t\t\t<a href="posts/${item.slug}.html"><img src="${escapeHtml(img)}" alt="${escapeHtml(item.title)}"></a>
-\t\t\t\t\t</div>
-\t\t\t\t\t<div class="post__body">
-\t\t\t\t\t\t<div class="post__header">
-\t\t\t\t\t\t\t<ul class="post__cats list-unstyled">
-\t\t\t\t\t\t\t\t<li class="post__cats-item ${item.color}">
-\t\t\t\t\t\t\t\t\t<a href="#">${escapeHtml(item.category)}</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t<h2 class="post__title h4"><a href="posts/${item.slug}.html">${escapeHtml(item.title)}</a></h2>
-\t\t\t\t\t\t\t<ul class="post__meta list-unstyled">
-\t\t\t\t\t\t\t\t<li class="post__meta-item post__meta-item--date">
-\t\t\t\t\t\t\t\t\t<a href="#">${item.dateFormatted}</a>
-\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t</div>
-\t\t\t\t\t\t<div class="post__excerpt">${escapeHtml(item.excerpt)}</div>
-\t\t\t\t\t</div>
-\t\t\t\t</article>`;
-    }).join('\n\n');
-
-    // Replace content inside #rss-feed-container
-    const rssStart = homeHtml.indexOf('<div id="rss-feed-container">');
-    if (rssStart !== -1) {
-      const rssEnd = homeHtml.indexOf('</div>', homeHtml.indexOf('</article>', rssStart + 100));
-      // Find the closing </div> that matches rss-feed-container (after all articles)
-      // Safer: find the pattern </div>\n\t\t\t</div> which closes rss-feed-container + content
-      const rssContainerClose = homeHtml.indexOf('\n\t\t\t</div>\n\t\t\t</div>', rssStart);
-      if (rssContainerClose !== -1) {
-        const before = homeHtml.substring(0, rssStart);
-        const after = homeHtml.substring(rssContainerClose);
-        homeHtml = before + `<div id="rss-feed-container">\n\n${homeArticles}\n\n\t\t\t\t</div>` + after;
-        fs.writeFileSync(homePath, homeHtml, 'utf8');
-        console.log('Updated home.html news section');
-      }
-    }
-  }
+  // ── Home.html news section removed — homepage now uses static hub panel ──
+  console.log('\nSkipping home.html news feed (removed from homepage).');
 
   // ── Update news.html with new layout ──
   console.log('Generating paginated news pages...');
