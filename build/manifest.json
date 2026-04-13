@@ -1,0 +1,21 @@
+{
+  "name": "Dragon's Shadow",
+  "short_name": "Dragon's Shadow",
+  "description": "Tools, news, and resources for tabletop gamers, streamers, and content creators.",
+  "start_url": "/home.html",
+  "display": "standalone",
+  "background_color": "#0a0a12",
+  "theme_color": "#8B0000",
+  "icons": [
+    {
+      "src": "/assets/img/dragon/app/DragonCircleLogo.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/assets/img/dragon/app/DragonCircleLogo.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ]
+}

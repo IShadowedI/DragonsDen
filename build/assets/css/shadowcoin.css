@@ -125,7 +125,7 @@
   background: rgba(124,58,237,0.15); border: 1px solid rgba(124,58,237,0.3);
   color: var(--sc-purple-light);
 }
-.sc-hero__logo { height: 96px; margin-bottom: 16px; filter: drop-shadow(0 4px 24px rgba(124,58,237,0.5)); }
+.sc-hero__logo { height: 96px; margin-bottom: 16px; filter: drop-shadow(0 4px 24px rgba(124,58,237,0.5)); border-radius: 16px; }
 .sc-hero__title {
   font-size: 56px; font-weight: 800; letter-spacing: -0.03em;
   background: linear-gradient(to right, #fff, var(--sc-purple-pale));

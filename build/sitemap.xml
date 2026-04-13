@@ -41,6 +41,16 @@
     <priority>0.7</priority>
   </url>
   <url>
+    <loc>https://dragonsshadow.com/shadow-coin.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
+    <loc>https://dragonsshadow.com/little-grotto.html</loc>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+  <url>
     <loc>https://dragonsshadow.com/dragon-about.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
