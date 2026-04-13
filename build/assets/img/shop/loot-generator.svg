@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1800"/>
+      <stop offset="100%" stop-color="#FDD835" stop-opacity="0.25"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#g)"/>
+  <rect x="0" y="196" width="400" height="4" fill="#FDD835" opacity="0.8"/>
+  <g transform="translate(165, 20) scale(3)" fill="#FDD835" opacity="0.7">
+    <path d="M20 6h-2.18c.11-.31.18-.65.18-1a3 3 0 00-3-3c-1.06 0-1.64.42-3 1.38C10.64 2.42 10.06 2 9 2a3 3 0 00-3 3c0 .35.07.69.18 1H4a2 2 0 00-2 2v3h20V8a2 2 0 00-2-2zm-5-2a1 1 0 011 1 1 1 0 01-1 1h-1.42L15 4.02V4zm-6 0c.01 0 .01-.01.01-.01A1 1 0 0110 5a1 1 0 01-1 1H7.58c.55-.68 1-1.2 1.42-2zM2 12v8a2 2 0 002 2h16a2 2 0 002-2v-8H13v8h-2v-8H2z"/>
+  </g>
+  <rect width="400" height="200" fill="url(#g)" opacity="0.3"/>
+  <rect x="0" y="120" width="400" height="80" fill="#1a1800" opacity="0.6"/>
+    <text x="200" y="145" text-anchor="middle" font-family="Rajdhani, sans-serif" font-size="22" font-weight="600" fill="#fff" opacity="0.95">Loot</text>
+    <text x="200" y="173" text-anchor="middle" font-family="Rajdhani, sans-serif" font-size="22" font-weight="600" fill="#fff" opacity="0.95">Generator</text>
+</svg>

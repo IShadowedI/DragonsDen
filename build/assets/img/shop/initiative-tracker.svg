@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="400" height="200" viewBox="0 0 400 200">
+  <defs>
+    <linearGradient id="g" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0%" stop-color="#1a1000"/>
+      <stop offset="100%" stop-color="#FF6F00" stop-opacity="0.25"/>
+    </linearGradient>
+  </defs>
+  <rect width="400" height="200" fill="url(#g)"/>
+  <rect x="0" y="196" width="400" height="4" fill="#FF6F00" opacity="0.8"/>
+  <g transform="translate(165, 20) scale(3)" fill="#FF6F00" opacity="0.7">
+    <path d="M13 3a9 9 0 00-9 9h3l-4 4-4-4h3a9 9 0 1018 0h-2a7 7 0 01-7 7 7 7 0 01-7-7 7 7 0 017-7V3zm-1 5v5l4.28 2.54.72-1.21-3.5-2.08V8H12z"/>
+  </g>
+  <rect width="400" height="200" fill="url(#g)" opacity="0.3"/>
+  <rect x="0" y="120" width="400" height="80" fill="#1a1000" opacity="0.6"/>
+    <text x="200" y="145" text-anchor="middle" font-family="Rajdhani, sans-serif" font-size="22" font-weight="600" fill="#fff" opacity="0.95">Initiative</text>
+    <text x="200" y="173" text-anchor="middle" font-family="Rajdhani, sans-serif" font-size="22" font-weight="600" fill="#fff" opacity="0.95">Tracker Pro</text>
+</svg>
