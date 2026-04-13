@@ -5,6 +5,17 @@
 # If you later set up the Gulp pipeline, uncomment the line below:
 # command = "npm run build"
 
+# Redirect old blog-classic URLs to news
+[[redirects]]
+  from = "/blog-classic.html"
+  to = "/news.html"
+  status = 301
+
+[[redirects]]
+  from = "/blog-classic-:num.html"
+  to = "/news-:num.html"
+  status = 301
+
 [[redirects]]
   from = "/*"
   to = "/404.html"

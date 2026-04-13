@@ -753,7 +753,7 @@ ${postsHtml}
 // ============================================================
 
 function buildPaginationNav(currentPage, totalPages) {
-  const pageFile = (p) => p === 1 ? 'blog-classic.html' : `blog-classic-${p}.html`;
+  const pageFile = (p) => p === 1 ? 'news.html' : `news-${p}.html`;
 
   let links = '';
 
@@ -783,6 +783,35 @@ function buildPaginationNav(currentPage, totalPages) {
   }
 
   return `<nav class="navigation pagination" role="navigation" aria-label="Posts"><div class="nav-links">${links}</div></nav>`;
+}
+
+function buildNewsPaginationNav(currentPage, totalPages) {
+  const pageFile = (p) => p === 1 ? 'news.html' : `news-${p}.html`;
+  let links = '';
+
+  // Previous
+  if (currentPage > 1) {
+    links += `<a href="${pageFile(currentPage - 1)}"><i class="fa fa-chevron-left"></i></a> `;
+  }
+
+  for (let p = 1; p <= totalPages; p++) {
+    if (p === 1 || p === totalPages || (p >= currentPage - 1 && p <= currentPage + 1)) {
+      if (p === currentPage) {
+        links += `<span class="current">${p}</span> `;
+      } else {
+        links += `<a href="${pageFile(p)}">${p}</a> `;
+      }
+    } else if (p === currentPage - 2 || p === currentPage + 2) {
+      links += `<span class="dots">&hellip;</span> `;
+    }
+  }
+
+  // Next
+  if (currentPage < totalPages) {
+    links += `<a href="${pageFile(currentPage + 1)}"><i class="fa fa-chevron-right"></i></a>`;
+  }
+
+  return `<nav class="news-pagination" id="news-pagination" role="navigation" aria-label="Posts">${links}</nav>`;
 }
 
 // ============================================================
@@ -952,11 +981,11 @@ async function main() {
     }
   }
 
-  // ── Update blog-classic.html with pagination ──
-  console.log('Generating paginated blog-classic pages...');
-  const classicPath = path.join(BUILD, 'blog-classic.html');
-  if (fs.existsSync(classicPath)) {
-    const classicTemplate = fs.readFileSync(classicPath, 'utf8');
+  // ── Update news.html with new layout ──
+  console.log('Generating paginated news pages...');
+  const newsPath = path.join(BUILD, 'news.html');
+  if (fs.existsSync(newsPath)) {
+    const newsTemplate = fs.readFileSync(newsPath, 'utf8');
     const ITEMS_PER_PAGE = 10;
     const totalPages = Math.ceil(Math.min(items.length, 60) / ITEMS_PER_PAGE);
 
@@ -964,98 +993,123 @@ async function main() {
       const startIdx = (page - 1) * ITEMS_PER_PAGE;
       const pageItems = items.slice(startIdx, startIdx + ITEMS_PER_PAGE);
 
-      const classicArticles = pageItems.map((item, i) => {
-        const img = item.localImage || PLACEHOLDER_IMGS[(startIdx + i) % PLACEHOLDER_IMGS.length];
-        return `\t\t\t\t\t\t\t<article class="post has-post-thumbnail">
-\t\t\t\t\t\t\t\t<div class="post__thumbnail">
-\t\t\t\t\t\t\t\t\t<a href="posts/${item.slug}.html">
-\t\t\t\t\t\t\t\t\t\t<img src="${escapeHtml(img)}" alt="${escapeHtml(item.title)}">
-\t\t\t\t\t\t\t\t\t</a>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t<div class="post__body">
-\t\t\t\t\t\t\t\t\t<div class="post__header">
-\t\t\t\t\t\t\t\t\t\t<ul class="post__cats list-unstyled">
-\t\t\t\t\t\t\t\t\t\t\t<li class="post__cats-item ${item.color}">
-\t\t\t\t\t\t\t\t\t\t\t\t<a href="#">${escapeHtml(item.category)}</a>
-\t\t\t\t\t\t\t\t\t\t\t</li>
-\t\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t\t\t<h2 class="post__title h4">
-\t\t\t\t\t\t\t\t\t\t\t<a href="posts/${item.slug}.html">${escapeHtml(item.title)}</a>
-\t\t\t\t\t\t\t\t\t\t</h2>
-\t\t\t\t\t\t\t\t\t\t<ul class="post__meta list-unstyled">
-\t\t\t\t\t\t\t\t\t\t\t<li class="post__meta-item post__meta-item--date">${item.dateFormatted}</li>
-\t\t\t\t\t\t\t\t\t\t\t<li class="post__meta-item">via ${escapeHtml(item.source)}</li>
-\t\t\t\t\t\t\t\t\t\t</ul>
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t\t<div class="post__excerpt">
-\t\t\t\t\t\t\t\t\t\t${escapeHtml(item.excerpt)}
-\t\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t\t</div>
-\t\t\t\t\t\t\t</article>`;
+      let newsHtml = newsTemplate;
+
+      // ─── Hero article (first item on page 1, first on each page) ───
+      const heroItem = pageItems[0];
+      const heroImg = heroItem.localImage || PLACEHOLDER_IMGS[0];
+      const heroBlock = `<div class="news-hero" id="news-hero">
+        <img class="news-hero__img" src="${escapeHtml(heroImg)}" alt="${escapeHtml(heroItem.title)}">
+        <div class="news-hero__overlay">
+          <span class="news-hero__cat">${escapeHtml(heroItem.category)}</span>
+          <h2 class="news-hero__title"><a href="posts/${heroItem.slug}.html">${escapeHtml(heroItem.title)}</a></h2>
+          <div class="news-hero__meta">
+            <span>${heroItem.dateFormatted}</span>
+            <span>&bull;</span>
+            <span>via ${escapeHtml(heroItem.source)}</span>
+          </div>
+        </div>
+      </div>`;
+
+      // Replace the hero block
+      const heroStart = newsHtml.indexOf('<div class="news-hero"');
+      const heroEnd = newsHtml.indexOf('</div>\n', newsHtml.indexOf('</div>\n', newsHtml.indexOf('</div>\n', heroStart + 1) + 1) + 1) + 6;
+      // Safer: find the closing of news-hero by counting
+      const heroCloseTag = '</div>\n\n      <!-- Right Sidebar';
+      const heroEndSafe = newsHtml.indexOf(heroCloseTag, heroStart);
+      if (heroStart !== -1 && heroEndSafe !== -1) {
+        newsHtml = newsHtml.substring(0, heroStart) + heroBlock + '\n\n      <!-- Right Sidebar' + newsHtml.substring(heroEndSafe + heroCloseTag.length);
+      }
+
+      // ─── Latest Posts sidebar (3 items, offset from hero) ───
+      const latestItems = page === 1 ? items.slice(1, 4) : items.slice(0, 3);
+      const latestHtml = latestItems.map(it => {
+        const img = it.localImage || PLACEHOLDER_IMGS[0];
+        return `          <div class="news-sidebar-post">
+            <div class="news-sidebar-post__thumb"><img src="${escapeHtml(img)}" alt=""></div>
+            <div class="news-sidebar-post__body">
+              <span class="news-sidebar-post__cat">${escapeHtml(it.category)}</span>
+              <h4 class="news-sidebar-post__title"><a href="posts/${it.slug}.html">${escapeHtml(it.title)}</a></h4>
+              <div class="news-sidebar-post__date">${it.dateFormatted}</div>
+            </div>
+          </div>`;
+      }).join('\n');
+
+      // Replace Latest Posts widget content
+      const lpStart = newsHtml.indexOf('<div class="news-sidebar-widget" id="news-latest-posts">');
+      const lpEnd = newsHtml.indexOf('</div>\n\n        <!-- Most Popular Posts');
+      if (lpStart !== -1 && lpEnd !== -1) {
+        const lpInner = `<div class="news-sidebar-widget" id="news-latest-posts">
+          <h3 class="news-sidebar-widget__title">Latest Posts</h3>
+${latestHtml}
+        </div>`;
+        newsHtml = newsHtml.substring(0, lpStart) + lpInner + '\n\n        <!-- Most Popular Posts' + newsHtml.substring(lpEnd + '</div>\n\n        <!-- Most Popular Posts'.length);
+      }
+
+      // ─── Most Popular Posts sidebar (5 items) ───
+      const popularItems = items.slice(4, 9);
+      const popularHtml = popularItems.map((it, i) => {
+        return `          <div class="news-popular-post">
+            <span class="news-popular-post__num">${i + 1}</span>
+            <div class="news-popular-post__body">
+              <h4 class="news-popular-post__title"><a href="posts/${it.slug}.html">${escapeHtml(it.title)}</a></h4>
+              <div class="news-popular-post__meta">${it.dateFormatted} &bull; ${escapeHtml(it.source)}</div>
+            </div>
+          </div>`;
+      }).join('\n');
+
+      // Replace Most Popular Posts widget content
+      const mpStart = newsHtml.indexOf('<div class="news-sidebar-widget" id="news-popular-posts">');
+      const mpEnd = newsHtml.indexOf('</div>\n      </div>\n      <!-- Right Sidebar / End -->');
+      if (mpStart !== -1 && mpEnd !== -1) {
+        const mpInner = `<div class="news-sidebar-widget" id="news-popular-posts">
+          <h3 class="news-sidebar-widget__title">Most Popular Posts</h3>
+${popularHtml}
+        </div>`;
+        newsHtml = newsHtml.substring(0, mpStart) + mpInner + '\n      </div>\n      <!-- Right Sidebar / End -->' + newsHtml.substring(mpEnd + '</div>\n      </div>\n      <!-- Right Sidebar / End -->'.length);
+      }
+
+      // ─── News feed cards (remaining items on the page, skip hero) ───
+      const feedItems = pageItems.slice(1);
+      const feedHtml = feedItems.map(it => {
+        const img = it.localImage || PLACEHOLDER_IMGS[0];
+        return `      <div class="news-feed-card">
+        <div class="news-feed-card__thumb"><img src="${escapeHtml(img)}" alt="${escapeHtml(it.title)}"></div>
+        <div class="news-feed-card__body">
+          <span class="news-feed-card__cat">${escapeHtml(it.category)}</span>
+          <h4 class="news-feed-card__title"><a href="posts/${it.slug}.html">${escapeHtml(it.title)}</a></h4>
+          <p class="news-feed-card__excerpt">${escapeHtml(it.excerpt)}</p>
+          <div class="news-feed-card__meta">${it.dateFormatted} &bull; via ${escapeHtml(it.source)}</div>
+        </div>
+      </div>`;
       }).join('\n\n');
 
-      // Build pagination nav
-      const pageFilename = page === 1 ? 'blog-classic.html' : `blog-classic-${page}.html`;
-      const paginationHtml = buildPaginationNav(page, totalPages);
+      // Replace news feed content
+      const feedStart = newsHtml.indexOf('<div class="news-feed" id="news-feed">');
+      const feedEnd = newsHtml.indexOf('</div>\n    <!-- News Feed / End -->');
+      if (feedStart !== -1 && feedEnd !== -1) {
+        const feedBlock = `<div class="news-feed" id="news-feed">
+      <h3 class="news-feed__header">More News</h3>
 
-      let classicHtml = classicTemplate;
+${feedHtml}
 
-      // Replace articles between first <article> and the pagination nav
-      const firstArticle = classicHtml.indexOf('<article class="post has-post-thumbnail">');
-      const paginationNav = classicHtml.indexOf('<nav class="navigation pagination"');
-      if (firstArticle !== -1 && paginationNav !== -1) {
-        // Find end of the pagination nav
-        const paginationEnd = classicHtml.indexOf('</nav>', paginationNav) + '</nav>'.length;
-        const before = classicHtml.substring(0, firstArticle);
-        const after = classicHtml.substring(paginationEnd);
-        classicHtml = before + classicArticles + '\n\n\t\t\t\t\t\t\t' + paginationHtml + after;
+    </div>`;
+        newsHtml = newsHtml.substring(0, feedStart) + feedBlock + '\n    <!-- News Feed / End -->' + newsHtml.substring(feedEnd + '</div>\n    <!-- News Feed / End -->'.length);
       }
 
-      // Replace Popular News sidebar with real articles
-      const popularStart = classicHtml.indexOf('<h3 class="widget-title">Popular News</h3>');
-      if (popularStart !== -1) {
-        const popularListStart = classicHtml.indexOf('<ul class="ncr-posts-list', popularStart);
-        const popularListEnd = classicHtml.indexOf('</ul>', popularListStart) + '</ul>'.length;
-        if (popularListStart !== -1 && popularListEnd > popularListStart) {
-          // Pick top 5 articles from different sources for variety
-          const popularItems = items.slice(0, 5);
-          const popularHtml = '<ul class="ncr-posts-list list-unstyled">' + popularItems.map(it => {
-            const img = it.localImage || PLACEHOLDER_IMGS[0];
-            return `<li class="ncr-posts-list__item has-post-thumbnail post"><div class="post__thumbnail"><a href="posts/${it.slug}.html"><img src="${escapeHtml(img)}" alt=""></a></div><div class="post__body"><div class="post__header"><ul class="post__cats list-unstyled"><li class="post__cats-item ${it.color}"><a href="#">${escapeHtml(it.category)}</a></li></ul><h2 class="post__title h6"><a href="posts/${it.slug}.html">${escapeHtml(it.title)}</a></h2><ul class="post__meta list-unstyled"><li class="post__meta-item post__meta-item--date">${it.dateFormatted}</li></ul></div></div></li>`;
-          }).join('') + '</ul>';
-          classicHtml = classicHtml.substring(0, popularListStart) + popularHtml + classicHtml.substring(popularListEnd);
-        }
+      // ─── Pagination ───
+      const paginationHtml = buildNewsPaginationNav(page, totalPages);
+      const pagStart = newsHtml.indexOf('<nav class="news-pagination"');
+      const pagEnd = newsHtml.indexOf('</nav>', pagStart) + '</nav>'.length;
+      if (pagStart !== -1 && pagEnd > pagStart) {
+        newsHtml = newsHtml.substring(0, pagStart) + paginationHtml + newsHtml.substring(pagEnd);
       }
 
-      // Replace Latest Posts sidebar
-      const latestStart = classicHtml.indexOf('<h3 class="widget-title">Latest Posts</h3>');
-      if (latestStart !== -1) {
-        const latestListStart = classicHtml.indexOf('<ul class="ncr-posts-list', latestStart);
-        const latestListEnd = classicHtml.indexOf('</ul>', latestListStart) + '</ul>'.length;
-        if (latestListStart !== -1 && latestListEnd > latestListStart) {
-          const latestItems = items.slice(5, 10);
-          const latestHtml = '<ul class="ncr-posts-list ncr-posts-list--thumb-on-bg list-unstyled">' + latestItems.map(it => {
-            const img = it.localImage || PLACEHOLDER_IMGS[0];
-            return `<li class="ncr-posts-list__item has-post-thumbnail post"><div class="post__thumbnail"><img src="${escapeHtml(img)}" alt=""></div><div class="post__body"><div class="post__header"><ul class="post__cats list-unstyled"><li class="post__cats-item ${it.color}"><a href="#">${escapeHtml(it.category)}</a></li></ul><h2 class="post__title h6"><a href="posts/${it.slug}.html" class="stretched-link">${escapeHtml(it.title)}</a></h2><ul class="post__meta list-unstyled"><li class="post__meta-item post__meta-item--date">${it.dateFormatted}</li></ul></div></div></li>`;
-          }).join('') + '</ul>';
-          classicHtml = classicHtml.substring(0, latestListStart) + latestHtml + classicHtml.substring(latestListEnd);
-        }
-      }
-
-      // Remove the hardcoded "Latest Comments" widget (no real comments to show)
-      const commentsWidgetStart = classicHtml.indexOf('<!-- Comment List -->');
-      if (commentsWidgetStart !== -1) {
-        const commentsWidgetEnd = classicHtml.indexOf('<!-- Comment List / End -->', commentsWidgetStart);
-        if (commentsWidgetEnd !== -1) {
-          classicHtml = classicHtml.substring(0, commentsWidgetStart) + classicHtml.substring(commentsWidgetEnd + '<!-- Comment List / End -->'.length);
-        }
-      }
-
-      const outPath = path.join(BUILD, pageFilename);
-      fs.writeFileSync(outPath, classicHtml, 'utf8');
+      const pageFilename = page === 1 ? 'news.html' : `news-${page}.html`;
+      fs.writeFileSync(path.join(BUILD, pageFilename), newsHtml, 'utf8');
       console.log(`  Generated ${pageFilename} (${pageItems.length} articles)`);
     }
-    console.log(`  ${totalPages} blog-classic pages total`);
+    console.log(`  ${totalPages} news pages total`);
   }
 
   console.log('\n=== Done! ===');
