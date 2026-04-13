@@ -457,12 +457,13 @@ textarea.tool-input {
 }
 
 /* ── Ad unit styling ── */
-.ds-ad-unit { margin: 24px 0; text-align: center; overflow: hidden; }
-.ds-ad-unit--horizontal { padding: 12px 0; }
-.ds-ad-unit--vertical { padding: 12px 0; }
-.ds-ad-unit--in-article { margin: 32px 0; }
-.ds-ad-unit--in-feed { margin: 16px 0; }
-.ds-ad-unit--multiplex { margin: 32px 0; }
+.ds-ad-unit { margin: 24px 0; text-align: center; min-height: 100px; }
+.ds-ad-unit--horizontal { padding: 12px 0; min-height: 100px; }
+.ds-ad-unit--vertical { padding: 12px 0; min-height: 250px; }
+.ds-ad-unit--in-article { margin: 32px 0; min-height: 250px; }
+.ds-ad-unit--in-feed { margin: 16px 0; min-height: 100px; }
+.ds-ad-unit--multiplex { margin: 32px 0; min-height: 250px; }
+.ds-ad-unit ins.adsbygoogle { display: block; min-height: inherit; }
 
 /* ── Comment styling: white text on dark bg ── */
 .post-comments__title,
