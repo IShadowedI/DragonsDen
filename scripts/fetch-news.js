@@ -1247,16 +1247,48 @@ async function main() {
 
       // Replace the hero block
       const heroStart = newsHtml.indexOf('<div class="news-hero"');
-      const heroEnd = newsHtml.indexOf('</div>\n', newsHtml.indexOf('</div>\n', newsHtml.indexOf('</div>\n', heroStart + 1) + 1) + 1) + 6;
-      // Safer: find the closing of news-hero by counting
-      const heroCloseTag = '</div>\n\n      <!-- Right Sidebar';
+      const heroCloseTag = '</div>\n\n      <!-- Sub-Featured';
       const heroEndSafe = newsHtml.indexOf(heroCloseTag, heroStart);
       if (heroStart !== -1 && heroEndSafe !== -1) {
-        newsHtml = newsHtml.substring(0, heroStart) + heroBlock + '\n\n      <!-- Right Sidebar' + newsHtml.substring(heroEndSafe + heroCloseTag.length);
+        newsHtml = newsHtml.substring(0, heroStart) + heroBlock + '\n\n      <!-- Sub-Featured' + newsHtml.substring(heroEndSafe + heroCloseTag.length);
       }
 
-      // ─── Latest Posts sidebar (3 items, offset from hero) ───
-      const latestItems = page === 1 ? validItems.slice(1, 4) : validItems.slice(0, 3);
+      // Helper: filter to items that have a real downloaded image (not placeholder)
+      const hasRealImage = (it) => it.localImage && !it.localImage.includes('samples/');
+
+      // ─── Sub-featured articles (2 cards with real images, inside the left column) ───
+      const subFeaturedItems = pageItems.filter(hasRealImage).slice(1, 3); // skip hero
+      if (subFeaturedItems.length >= 2) {
+        const subFeaturedHtml = `<div class="news-sub-featured" id="news-sub-featured">
+${subFeaturedItems.map(it => {
+  const img = it.localImage;
+  return `      <div class="news-sub-featured__card">
+        <a href="posts/${it.slug}.html">
+          <img src="${escapeHtml(img)}" alt="${escapeHtml(it.title)}">
+          <div class="news-sub-featured__overlay">
+            <span class="news-sub-featured__cat">${escapeHtml(it.category)}</span>
+            <h3 class="news-sub-featured__title">${escapeHtml(it.title)}</h3>
+            <div class="news-sub-featured__meta">${it.dateFormatted}</div>
+          </div>
+        </a>
+      </div>`;
+}).join('\n')}
+      </div>`;
+
+        // Replace content of the sub-featured placeholder inside the left column
+        const sfStart = newsHtml.indexOf('<div class="news-sub-featured"');
+        const sfEndTag = '</div>\n\n      </div>\n      <!-- Left Column';
+        if (sfStart !== -1) {
+          const sfEnd = newsHtml.indexOf(sfEndTag, sfStart);
+          if (sfEnd !== -1) {
+            newsHtml = newsHtml.substring(0, sfStart) + subFeaturedHtml + '\n\n      </div>\n      <!-- Left Column' + newsHtml.substring(sfEnd + sfEndTag.length);
+          }
+        }
+      }
+
+      // ─── Latest Posts sidebar (3 items with real images) ───
+      const latestCandidates = validItems.filter(hasRealImage);
+      const latestItems = page === 1 ? latestCandidates.slice(1, 4) : latestCandidates.slice(0, 3);
       const latestHtml = latestItems.map(it => {
         const img = it.localImage || PLACEHOLDER_IMGS[0];
         return `          <div class="news-sidebar-post">
@@ -1301,43 +1333,6 @@ ${latestHtml}
 ${popularHtml}
         </div>`;
         newsHtml = newsHtml.substring(0, mpStart) + mpInner + '\n      </div>\n      <!-- Right Sidebar / End -->' + newsHtml.substring(mpEnd + '</div>\n      </div>\n      <!-- Right Sidebar / End -->'.length);
-      }
-
-      // ─── Sub-featured articles (2 smaller cards below hero) ───
-      const subFeaturedItems = pageItems.slice(1, 3);
-      if (subFeaturedItems.length >= 2) {
-        const subFeaturedHtml = `    <div class="news-sub-featured" id="news-sub-featured">
-${subFeaturedItems.map(it => {
-  const img = it.localImage || PLACEHOLDER_IMGS[0];
-  return `      <div class="news-sub-featured__card">
-        <a href="posts/${it.slug}.html">
-          <img src="${escapeHtml(img)}" alt="${escapeHtml(it.title)}">
-          <div class="news-sub-featured__overlay">
-            <span class="news-sub-featured__cat">${escapeHtml(it.category)}</span>
-            <h3 class="news-sub-featured__title">${escapeHtml(it.title)}</h3>
-            <div class="news-sub-featured__meta">${it.dateFormatted}</div>
-          </div>
-        </a>
-      </div>`;
-}).join('\n')}
-    </div>`;
-
-        // Insert or replace sub-featured section
-        const sfStart = newsHtml.indexOf('<div class="news-sub-featured"');
-        const sfEndTag = '</div>\n\n    <!-- News Feed';
-        if (sfStart !== -1) {
-          const sfEnd = newsHtml.indexOf(sfEndTag, sfStart);
-          if (sfEnd !== -1) {
-            newsHtml = newsHtml.substring(0, sfStart) + subFeaturedHtml.trim() + '\n\n    <!-- News Feed' + newsHtml.substring(sfEnd + sfEndTag.length);
-          }
-        } else {
-          // Insert before news feed
-          const feedMarker = '    <!-- News Feed -->';
-          const fmIdx = newsHtml.indexOf(feedMarker);
-          if (fmIdx !== -1) {
-            newsHtml = newsHtml.substring(0, fmIdx) + subFeaturedHtml + '\n\n' + feedMarker + newsHtml.substring(fmIdx + feedMarker.length);
-          }
-        }
       }
 
       // ─── News feed cards (remaining items on the page, skip hero + sub-featured) ───

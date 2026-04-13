@@ -1818,6 +1818,11 @@ article.post-grid,
   grid-template-columns: 1fr 300px;
   gap: 0;
 }
+.news-top-row__left {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+}
 
 /* Hero article (53:30 aspect ratio) */
 .news-hero {
@@ -2087,12 +2092,13 @@ article.post-grid,
   margin-top: 2px;
 }
 
-/* Sub-Featured Articles — 2 smaller cards between hero and news feed */
+/* Sub-Featured Articles — 2 smaller cards below hero in the left column */
 .news-sub-featured {
   display: grid;
   grid-template-columns: 1fr 1fr;
   gap: 16px;
-  margin-top: 20px;
+  margin-top: 16px;
+  flex: 1;
 }
 .news-sub-featured__card {
   position: relative;
