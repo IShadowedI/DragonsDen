@@ -1715,3 +1715,25 @@ article.post-grid,
 .blog-layout--classic .post.has-post-thumbnail:first-child .post__thumbnail img {
   opacity: 0.65;
 }
+
+/* ── Project Page — Back Button & Nav Hiding ── */
+.project-back-btn {
+  position: fixed; top: 20px; left: 20px; z-index: 1000;
+  display: inline-flex; align-items: center; gap: 6px;
+  padding: 10px 20px; border-radius: 12px;
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.1);
+  color: rgba(255,255,255,0.7);
+  font-size: 14px; font-weight: 500;
+  text-decoration: none;
+  backdrop-filter: blur(10px); -webkit-backdrop-filter: blur(10px);
+  transition: all 0.3s;
+}
+.project-back-btn:hover {
+  background: rgba(255,255,255,0.1);
+  border-color: rgba(255,255,255,0.2);
+  color: #fff;
+}
+.project-back-btn svg {
+  width: 20px; height: 20px; flex-shrink: 0;
+}

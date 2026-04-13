@@ -1,0 +1,324 @@
+/* =============================================
+   Little Grotto — Scoped Styles
+   Warm, earthy, cozy game landing page.
+   All rules prefixed with .lg-page to avoid conflicts.
+   ============================================= */
+
+/* ---------- Reset ---------- */
+.lg-page {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
+  color: #fff; line-height: 1.6; -webkit-font-smoothing: antialiased;
+}
+.lg-page *, .lg-page *::before, .lg-page *::after { box-sizing: border-box; }
+.lg-page img { max-width: 100%; height: auto; }
+.lg-page a { color: inherit; text-decoration: none; }
+.lg-page ul { list-style: none; margin: 0; padding: 0; }
+.lg-page h1,.lg-page h2,.lg-page h3,.lg-page h4 { margin: 0; font-weight: 700; line-height: 1.2; }
+.lg-page p { margin: 0 0 1em; }
+
+/* ---------- Colors ---------- */
+:root {
+  --lg-green: #22c55e;
+  --lg-green-dark: #15803d;
+  --lg-green-light: #4ade80;
+  --lg-green-pale: #bbf7d0;
+  --lg-emerald: #10b981;
+  --lg-teal: #14b8a6;
+  --lg-gold: #eab308;
+  --lg-amber: #f59e0b;
+  --lg-warm: #d4a574;
+  --lg-bg: #0a0e07;
+  --lg-bg-subtle: #0d120a;
+  --lg-text: #ffffff;
+  --lg-text-muted: #a0b89a;
+  --lg-border: rgba(255,255,255,0.06);
+  --lg-card-bg: rgba(255,255,255,0.02);
+  --lg-card-hover: rgba(255,255,255,0.04);
+}
+
+/* ---------- Layout ---------- */
+.lg-page { background: var(--lg-bg); min-height: 100vh; }
+.lg-container { max-width: 1152px; margin: 0 auto; padding: 0 24px; }
+.lg-content { position: relative; z-index: 10; }
+
+/* ---------- Backgrounds ---------- */
+.lg-bg-gradient {
+  position: fixed; inset: 0; z-index: 0;
+  background: linear-gradient(to bottom, #0d1a0a, #0a0e07, #000);
+}
+.lg-glow {
+  position: absolute; border-radius: 50%; filter: blur(120px); pointer-events: none;
+}
+.lg-glow--hero-top {
+  top: 0; left: 50%; transform: translateX(-50%);
+  width: 800px; height: 600px;
+  background: rgba(34,197,94,0.12);
+}
+.lg-glow--hero-br {
+  bottom: 25%; right: 20%;
+  width: 400px; height: 400px;
+  background: rgba(20,184,166,0.08);
+}
+.lg-glow--hero-tl {
+  top: 33%; left: 10%;
+  width: 300px; height: 300px;
+  background: rgba(234,179,8,0.06);
+}
+.lg-glow--center {
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 600px; height: 600px;
+  background: rgba(34,197,94,0.04);
+}
+.lg-glow--cta {
+  top: 50%; left: 50%; transform: translate(-50%,-50%);
+  width: 700px; height: 500px;
+  background: rgba(34,197,94,0.12);
+}
+
+/* ---------- Fireflies ---------- */
+@keyframes lg-firefly-drift {
+  0% { transform: translateY(100vh) translateX(0); opacity: 0; }
+  10% { opacity: 0.9; }
+  50% { transform: translateY(40vh) translateX(30px); }
+  70% { opacity: 0.5; }
+  100% { transform: translateY(-20px) translateX(-20px); opacity: 0; }
+}
+@keyframes lg-firefly-glow {
+  0%, 100% { box-shadow: 0 0 4px var(--lg-gold), 0 0 10px rgba(234,179,8,0.3); }
+  50% { box-shadow: 0 0 8px var(--lg-gold), 0 0 20px rgba(234,179,8,0.5); }
+}
+.lg-firefly {
+  position: absolute; bottom: 0;
+  width: 4px; height: 4px; border-radius: 50%;
+  background: var(--lg-gold);
+  animation: lg-firefly-drift 10s ease-in-out infinite, lg-firefly-glow 2s ease-in-out infinite;
+  pointer-events: none;
+}
+
+/* ---------- Buttons ---------- */
+.lg-btn {
+  display: inline-flex; align-items: center; justify-content: center;
+  padding: 10px 20px; border-radius: 12px;
+  font-size: 14px; font-weight: 600; cursor: pointer;
+  border: none; transition: all 0.3s; text-decoration: none;
+}
+.lg-btn--primary {
+  background: linear-gradient(to right, var(--lg-green), var(--lg-green-dark));
+  color: #fff; box-shadow: 0 0 40px rgba(34,197,94,0.3);
+}
+.lg-btn--primary:hover {
+  background: linear-gradient(to right, var(--lg-green-light), var(--lg-emerald));
+}
+.lg-btn--lg { padding: 14px 32px; font-size: 16px; }
+.lg-btn--outline {
+  background: rgba(255,255,255,0.05);
+  border: 1px solid rgba(255,255,255,0.15);
+  color: rgba(255,255,255,0.8);
+}
+.lg-btn--outline:hover { background: rgba(255,255,255,0.1); color: #fff; }
+.lg-btn svg { width: 20px; height: 20px; margin-right: 8px; }
+
+/* ---------- Hero ---------- */
+.lg-hero {
+  position: relative; min-height: 100vh;
+  display: flex; align-items: center; justify-content: center;
+  overflow: hidden; background: var(--lg-bg);
+}
+.lg-hero__inner {
+  position: relative; z-index: 10; width: 100%;
+  text-align: center; padding: 24px; max-width: 960px; margin: 0 auto;
+}
+.lg-hero__badge {
+  display: inline-block; padding: 6px 16px; border-radius: 9999px;
+  font-size: 11px; font-weight: 600; letter-spacing: 0.2em;
+  background: rgba(34,197,94,0.1); border: 1px solid rgba(34,197,94,0.25);
+  color: var(--lg-green-light);
+}
+.lg-hero__title {
+  font-size: 60px; font-weight: 800; letter-spacing: -0.03em;
+  background: linear-gradient(to right, #fff, var(--lg-green-pale));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.lg-hero__subtitle {
+  display: block; margin-top: 8px; font-size: 18px; font-weight: 300;
+  letter-spacing: 0.3em; text-transform: uppercase;
+  color: rgba(78,222,128,0.6);
+}
+.lg-page .lg-hero__desc {
+  max-width: 540px; margin: 32px auto 40px;
+  font-size: 18px; color: var(--lg-text-muted); font-weight: 300; line-height: 1.7;
+}
+.lg-hero__cta { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 16px; }
+
+/* ---------- Scene Illustration (CSS Art) ---------- */
+.lg-scene {
+  position: relative; margin: 64px auto 0; max-width: 600px; height: 160px;
+  opacity: 0.6;
+}
+.lg-scene__ground {
+  position: absolute; bottom: 0; left: 0; right: 0; height: 40px;
+  background: linear-gradient(to top, rgba(34,197,94,0.15), transparent);
+  border-radius: 50% 50% 0 0;
+}
+.lg-scene__mushroom {
+  position: absolute; bottom: 20px;
+  width: 24px; height: 32px;
+  background: linear-gradient(to top, var(--lg-warm), transparent);
+  border-radius: 50% 50% 2px 2px;
+}
+.lg-scene__mushroom::before {
+  content: '';
+  position: absolute; top: -12px; left: -6px;
+  width: 36px; height: 20px; border-radius: 50%;
+}
+.lg-scene__mushroom--1 { left: 30%; }
+.lg-scene__mushroom--1::before { background: rgba(239,68,68,0.4); }
+.lg-scene__mushroom--2 { left: 50%; width: 18px; height: 24px; }
+.lg-scene__mushroom--2::before { width: 28px; left: -5px; top: -10px; background: rgba(234,179,8,0.3); height: 16px; }
+.lg-scene__mushroom--3 { left: 65%; }
+.lg-scene__mushroom--3::before { background: rgba(168,85,247,0.3); }
+.lg-scene__lantern {
+  position: absolute; bottom: 30px; left: 45%;
+  width: 8px; height: 40px; background: rgba(255,255,255,0.1);
+  border-radius: 2px;
+}
+.lg-scene__lantern::after {
+  content: '';
+  position: absolute; top: -14px; left: -8px;
+  width: 24px; height: 18px; border-radius: 6px;
+  background: rgba(234,179,8,0.25); box-shadow: 0 0 30px rgba(234,179,8,0.3);
+}
+.lg-scene__glow {
+  position: absolute; bottom: 30px; left: 42%;
+  width: 60px; height: 60px; border-radius: 50%;
+  background: radial-gradient(rgba(234,179,8,0.15), transparent);
+  filter: blur(10px);
+}
+
+/* ---------- Scroll Indicator ---------- */
+@keyframes lg-bounce { 0%,100% { transform: translateY(0); } 50% { transform: translateY(8px); } }
+.lg-scroll-indicator {
+  position: absolute; bottom: 32px; left: 50%; transform: translateX(-50%);
+  animation: lg-bounce 2s infinite;
+}
+.lg-scroll-indicator svg { width: 20px; height: 20px; color: rgba(255,255,255,0.2); }
+
+/* ---------- Section ---------- */
+.lg-section {
+  position: relative; padding: 96px 0; overflow: hidden; background: var(--lg-bg);
+}
+.lg-section__divider {
+  position: absolute; top: 0; left: 0; right: 0; height: 1px;
+  background: linear-gradient(to right, transparent, rgba(34,197,94,0.2), transparent);
+}
+.lg-section__header { text-align: center; margin-bottom: 64px; }
+.lg-section__label {
+  display: block; font-size: 12px; font-weight: 600;
+  letter-spacing: 0.25em; text-transform: uppercase;
+  color: var(--lg-green); margin-bottom: 16px;
+}
+.lg-section__title { font-size: 36px; color: #fff; letter-spacing: -0.025em; margin-bottom: 16px; }
+.lg-page .lg-section__subtitle {
+  color: var(--lg-text-muted); font-size: 18px; font-weight: 300;
+  max-width: 512px; margin: 0 auto;
+}
+
+/* ---------- Feature Cards ---------- */
+.lg-features { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.lg-card {
+  padding: 24px 32px; border-radius: 16px;
+  border: 1px solid rgba(255,255,255,0.05); background: var(--lg-card-bg);
+  transition: all 0.5s;
+}
+.lg-card:hover { background: var(--lg-card-hover); border-color: rgba(255,255,255,0.08); }
+.lg-card__icon {
+  display: inline-flex; align-items: center; justify-content: center;
+  width: 48px; height: 48px; border-radius: 12px; margin-bottom: 20px;
+}
+.lg-card__icon--green { background: linear-gradient(to bottom right, var(--lg-green), var(--lg-green-dark)); }
+.lg-card__icon--teal { background: linear-gradient(to bottom right, var(--lg-teal), #0d9488); }
+.lg-card__icon--emerald { background: linear-gradient(to bottom right, var(--lg-emerald), #047857); }
+.lg-card__icon svg { width: 20px; height: 20px; color: #fff; }
+.lg-card__title { font-size: 18px; margin-bottom: 8px; }
+.lg-card__text { font-size: 14px; color: var(--lg-text-muted); font-weight: 300; line-height: 1.7; }
+
+/* ---------- Progress / Dev Roadmap ---------- */
+.lg-progress { max-width: 640px; margin: 0 auto; }
+.lg-progress__item {
+  display: flex; align-items: flex-start; gap: 20px;
+  padding: 24px 0; border-bottom: 1px solid rgba(255,255,255,0.04);
+}
+.lg-progress__item:last-child { border-bottom: none; }
+.lg-progress__icon {
+  flex-shrink: 0; width: 36px; height: 36px;
+  display: flex; align-items: center; justify-content: center;
+  border-radius: 50%; font-size: 14px; font-weight: 700;
+}
+.lg-progress__icon--done {
+  background: rgba(34,197,94,0.15); color: var(--lg-green);
+  border: 1px solid rgba(34,197,94,0.3);
+}
+.lg-progress__icon--active {
+  background: rgba(234,179,8,0.15); color: var(--lg-gold);
+  border: 1px solid rgba(234,179,8,0.3);
+  animation: lg-pulse 2s ease-in-out infinite;
+}
+.lg-progress__icon--pending {
+  background: rgba(255,255,255,0.03); color: rgba(255,255,255,0.2);
+  border: 1px solid rgba(255,255,255,0.06);
+}
+@keyframes lg-pulse { 0%,100% { box-shadow: 0 0 0 0 rgba(234,179,8,0.2); } 50% { box-shadow: 0 0 0 8px rgba(234,179,8,0); } }
+.lg-progress__title { font-size: 16px; margin-bottom: 4px; }
+.lg-progress__text { font-size: 14px; color: var(--lg-text-muted); font-weight: 300; line-height: 1.6; }
+.lg-progress__text:last-child { margin-bottom: 0; }
+
+/* ---------- CTA ---------- */
+.lg-cta { text-align: center; }
+.lg-cta__icon { font-size: 64px; margin-bottom: 24px; line-height: 1; }
+.lg-cta__title { font-size: 42px; margin-bottom: 20px; letter-spacing: -0.025em; }
+.lg-cta__title span {
+  background: linear-gradient(to right, var(--lg-green), var(--lg-emerald));
+  -webkit-background-clip: text; -webkit-text-fill-color: transparent; background-clip: text;
+}
+.lg-page .lg-cta__desc {
+  color: var(--lg-text-muted); font-size: 18px; font-weight: 300;
+  max-width: 512px; margin: 0 auto 40px;
+}
+.lg-cta__buttons { display: flex; flex-wrap: wrap; align-items: center; justify-content: center; gap: 12px; }
+
+/* ---------- Footer ---------- */
+.lg-footer {
+  position: relative; background: #070a05;
+  border-top: 1px solid rgba(255,255,255,0.04); padding: 48px 0;
+}
+.lg-footer__inner {
+  display: flex; align-items: center; justify-content: space-between;
+  flex-wrap: wrap; gap: 16px;
+}
+.lg-footer__text { font-size: 13px; color: rgba(160,184,154,0.5); font-weight: 300; }
+.lg-footer__links { display: flex; gap: 24px; }
+.lg-footer__links a {
+  font-size: 13px; color: rgba(160,184,154,0.5); font-weight: 300; transition: color 0.2s;
+}
+.lg-footer__links a:hover { color: rgba(255,255,255,0.6); }
+
+/* ---------- Responsive ---------- */
+@media (max-width: 1024px) {
+  .lg-features { grid-template-columns: repeat(2, 1fr); }
+  .lg-section__title { font-size: 28px; }
+  .lg-cta__title { font-size: 32px; }
+  .lg-hero__title { font-size: 46px; }
+}
+@media (max-width: 768px) {
+  .lg-features { grid-template-columns: 1fr; }
+  .lg-footer__inner { flex-direction: column; text-align: center; }
+  .lg-hero__title { font-size: 36px; }
+  .lg-hero__subtitle { font-size: 14px; }
+  .lg-scene { height: 120px; }
+}
+@media (max-width: 480px) {
+  .lg-hero__cta { flex-direction: column; }
+  .lg-cta__buttons { flex-direction: column; }
+  .lg-cta__title { font-size: 24px; }
+  .lg-hero__title { font-size: 28px; }
+}
