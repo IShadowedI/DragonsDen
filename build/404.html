@@ -45,7 +45,6 @@
 	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5492466041818466" crossorigin="anonymous"></script>
 
 	<!-- Snipcart E-Commerce -->
-	<link rel="stylesheet" href="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.css" />
 	<style>
 		/* Dark theme overrides for Snipcart modal */
 		.snipcart-modal__container { z-index: 99999 !important; }
@@ -1770,8 +1769,16 @@
 
 
 	<!-- Snipcart Container (must be before </body>) -->
-	<div hidden id="snipcart" data-api-key="NTQ2YzQ4NzItYmZlOS00OWQyLWE3YWYtNTkyMmY2NzlhMzFhNjM5MTE2MzUwOTYzODMxMDQ4" data-config-modal-style="side" data-currency="usd"></div>
-	<script async src="https://cdn.snipcart.com/themes/v3.7.1/default/snipcart.js"></script>
+	<script>
+	  window.SnipcartSettings = {
+	    publicApiKey: "NTQ2YzQ4NzItYmZlOS00OWQyLWE3YWYtNTkyMmY2NzlhMzFhNjM5MTE2MzUwOTYzODMxMDQ4",
+	    loadStrategy: "on-user-interaction",
+	    modalStyle: "side",
+	    currency: "usd",
+	    version: "3.7.1"
+	  };
+	  (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;var t=document.getElementsByTagName("head")[0],n=document.createElement("script");n.src=window.SnipcartSettings.protocol+"://"+window.SnipcartSettings.domain+"/themes/v"+window.SnipcartSettings.version+"/default/snipcart.js";n.async=!0;t.appendChild(n);var i=document.createElement("link");i.rel="stylesheet";i.type="text/css";i.href=window.SnipcartSettings.protocol+"://"+window.SnipcartSettings.domain+"/themes/v"+window.SnipcartSettings.version+"/default/snipcart.css";t.appendChild(i)}})();
+	</script>
 </body>
 
 </html>
