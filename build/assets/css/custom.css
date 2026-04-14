@@ -1340,6 +1340,10 @@ article.post-grid,
 .main-nav__megamenu .mega-col {
   padding: 0 20px;
 }
+.main-nav__megamenu .mega-col--5 {
+  flex: 0 0 20%;
+  max-width: 20%;
+}
 .main-nav__megamenu .mega-col__title {
   display: flex;
   align-items: center;
@@ -1854,7 +1858,7 @@ article.post-grid,
   background: #0e1019;
 }
 .news-hero--secondary {
-  aspect-ratio: 21 / 9;
+  aspect-ratio: 53 / 30;
 }
 .news-hero__img {
   width: 100%;
