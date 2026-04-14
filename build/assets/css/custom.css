@@ -62,17 +62,173 @@ body.site-layout--horizontal.scroll-is--active {
   overflow-y: hidden !important;
 }
 
-/* ── Homepage: dark post cards in horizontal blog grid ── */
-.blog-layout--style-1 .post {
-  background-color: #13151e !important;
+/* ── Homepage: Project Showcase ── */
+.home-showcase {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  min-width: 900px;
+  max-width: 1100px;
+  height: 100%;
+  padding: 40px 60px;
+  box-sizing: border-box;
 }
-.home-projects .post__thumbnail {
-  background-color: #0a0c14 !important;
+.home-showcase__header {
+  text-align: center;
+  margin-bottom: 32px;
 }
-.home-projects .post__thumbnail img {
-  object-fit: contain !important;
-  padding: 20px;
+.home-showcase__title {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.6rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #fff;
+  margin: 0 0 8px;
 }
+.home-showcase__subtitle {
+  font-size: 0.8rem;
+  color: rgba(255,255,255,0.45);
+  margin: 0;
+  letter-spacing: 0.03em;
+}
+.home-showcase__cards {
+  display: flex;
+  gap: 24px;
+  flex: 1;
+  min-height: 0;
+}
+
+/* ── Showcase Card ── */
+.showcase-card {
+  position: relative;
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 32px 24px 28px;
+  background: rgba(19, 21, 30, 0.85);
+  border: 1px solid rgba(139, 0, 0, 0.15);
+  border-radius: 16px;
+  overflow: hidden;
+  text-decoration: none;
+  color: #fff;
+  transition: transform 0.3s, border-color 0.3s, box-shadow 0.3s;
+  backdrop-filter: blur(12px);
+}
+.showcase-card:hover {
+  transform: translateY(-6px);
+  border-color: rgba(139, 0, 0, 0.4);
+  box-shadow: 0 12px 40px rgba(139, 0, 0, 0.15);
+  color: #fff;
+  text-decoration: none;
+}
+
+/* Ambient glow behind card */
+.showcase-card__glow {
+  position: absolute;
+  top: -40%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 200px;
+  height: 200px;
+  border-radius: 50%;
+  filter: blur(80px);
+  opacity: 0.15;
+  pointer-events: none;
+  transition: opacity 0.4s;
+}
+.showcase-card:hover .showcase-card__glow {
+  opacity: 0.3;
+}
+.showcase-card--dragon .showcase-card__glow { background: #8B0000; }
+.showcase-card--coin .showcase-card__glow { background: #F59E0B; }
+.showcase-card--grotto .showcase-card__glow { background: #10B981; }
+
+/* Icon */
+.showcase-card__icon {
+  width: 72px;
+  height: 72px;
+  margin-bottom: 18px;
+  flex-shrink: 0;
+}
+.showcase-card__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  filter: drop-shadow(0 2px 8px rgba(0,0,0,0.4));
+}
+
+/* Badge */
+.showcase-card__badge {
+  display: inline-block;
+  font-size: 0.55rem;
+  font-weight: 700;
+  letter-spacing: 0.15em;
+  text-transform: uppercase;
+  padding: 3px 10px;
+  border-radius: 20px;
+  background: rgba(139, 0, 0, 0.2);
+  color: var(--accent-light);
+  margin-bottom: 12px;
+}
+.showcase-card__badge--dev {
+  background: rgba(16, 185, 129, 0.15);
+  color: #34D399;
+}
+
+/* Text */
+.showcase-card__name {
+  font-family: 'Rajdhani', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  margin: 0 0 4px;
+}
+.showcase-card__tagline {
+  font-size: 0.75rem;
+  font-style: italic;
+  color: rgba(255,255,255,0.5);
+  margin: 0 0 14px;
+}
+.showcase-card__desc {
+  font-size: 0.7rem;
+  line-height: 1.6;
+  color: rgba(255,255,255,0.55);
+  margin: 0;
+  flex: 1;
+}
+
+/* CTA */
+.showcase-card__cta {
+  display: inline-block;
+  margin-top: 18px;
+  font-size: 0.65rem;
+  font-weight: 700;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent-light);
+  transition: color 0.2s, letter-spacing 0.2s;
+}
+.showcase-card:hover .showcase-card__cta {
+  color: #fff;
+  letter-spacing: 0.16em;
+}
+
+/* Color accents per card on hover */
+.showcase-card--dragon:hover { border-color: rgba(139, 0, 0, 0.5); }
+.showcase-card--coin:hover { border-color: rgba(245, 158, 11, 0.4); }
+.showcase-card--grotto:hover { border-color: rgba(16, 185, 129, 0.35); }
+.showcase-card--coin .showcase-card__badge {
+  background: rgba(245, 158, 11, 0.15);
+  color: #FBBF24;
+}
+.showcase-card--coin .showcase-card__cta { color: #FBBF24; }
+.showcase-card--coin:hover .showcase-card__cta { color: #fff; }
+.showcase-card--grotto .showcase-card__cta { color: #34D399; }
+.showcase-card--grotto:hover .showcase-card__cta { color: #fff; }
 
 /* Smooth scrolling */
 html {
@@ -1338,7 +1494,10 @@ article.post-grid,
    Features Mega-Menu Custom Styling
    ══════════════════════════════════════ */
 .main-nav__megamenu .mega-col {
-  padding: 0 20px;
+  position: relative;
+  width: 100%;
+  padding-right: 15px;
+  padding-left: 15px;
 }
 .main-nav__megamenu .mega-col--5 {
   flex: 0 0 20%;
