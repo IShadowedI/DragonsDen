@@ -53,6 +53,22 @@ Description: Custom overrides — Dragon-inspired dark aesthetic
   --text-muted: #a0a0b8;
 }
 
+/* ── Homepage: fix navbar clipping + scrollbar jitter ── */
+@media (min-width: 992px) {
+  .site-layout--horizontal .site-content {
+    height: calc(100vh - 72px);
+  }
+}
+@media (min-width: 1920px) {
+  .site-layout--horizontal .site-content {
+    height: calc(100vh - 100px);
+  }
+}
+.site-layout--horizontal .site-content > .content {
+  overflow-y: auto;
+  scrollbar-gutter: stable;
+}
+
 /* Smooth scrolling */
 html {
   scroll-behavior: smooth;
