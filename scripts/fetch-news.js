@@ -1212,23 +1212,45 @@ async function main() {
       // Helper: filter to items that have a real downloaded image (not placeholder)
       const hasRealImage = (it) => it.localImage && !it.localImage.includes('samples/');
 
-      // ─── Random article hero (second hero block, random pick from valid items) ───
+      // ─── Random article hero (client-side randomized on every page view) ───
       const randomCandidates = validItems.filter(it => hasRealImage(it) && it !== heroItem);
       if (randomCandidates.length > 0) {
-        const randomItem = randomCandidates[Math.floor(Math.random() * randomCandidates.length)];
-        const randomImg = randomItem.localImage || PLACEHOLDER_IMGS[0];
+        // Embed candidate data as JSON for client-side random pick
+        const candidateData = randomCandidates.map(it => ({
+          img: it.localImage || PLACEHOLDER_IMGS[0],
+          title: it.title,
+          category: it.category,
+          slug: it.slug,
+          date: it.dateFormatted,
+          source: it.source
+        }));
+
+        // Pick one at build time as the default/fallback
+        const defaultItem = randomCandidates[0];
+        const defaultImg = defaultItem.localImage || PLACEHOLDER_IMGS[0];
         const randomHeroHtml = `<div class="news-hero news-hero--secondary" id="news-hero-random">
-        <img class="news-hero__img" src="${escapeHtml(randomImg)}" alt="${escapeHtml(randomItem.title)}">
+        <img class="news-hero__img" src="${escapeHtml(defaultImg)}" alt="${escapeHtml(defaultItem.title)}">
         <div class="news-hero__overlay">
-          <span class="news-hero__cat">${escapeHtml(randomItem.category)}</span>
-          <h2 class="news-hero__title"><a href="posts/${randomItem.slug}.html">${escapeHtml(randomItem.title)}</a></h2>
+          <span class="news-hero__cat">${escapeHtml(defaultItem.category)}</span>
+          <h2 class="news-hero__title"><a href="posts/${defaultItem.slug}.html">${escapeHtml(defaultItem.title)}</a></h2>
           <div class="news-hero__meta">
-            <span>${randomItem.dateFormatted}</span>
+            <span>${defaultItem.dateFormatted}</span>
             <span>&bull;</span>
-            <span>via ${escapeHtml(randomItem.source)}</span>
+            <span>via ${escapeHtml(defaultItem.source)}</span>
           </div>
         </div>
-      </div>`;
+      </div>
+      <script>
+      (function(){
+        var c=${JSON.stringify(candidateData)};
+        var r=c[Math.floor(Math.random()*c.length)];
+        var el=document.getElementById('news-hero-random');
+        if(el&&r){
+          function e(s){return s.replace(/&/g,'&amp;').replace(/</g,'&lt;').replace(/>/g,'&gt;').replace(/"/g,'&quot;');}
+          el.innerHTML='<img class="news-hero__img" src="'+e(r.img)+'" alt="'+e(r.title)+'"><div class="news-hero__overlay"><span class="news-hero__cat">'+e(r.category)+'</span><h2 class="news-hero__title"><a href="posts/'+r.slug+'.html">'+e(r.title)+'</a></h2><div class="news-hero__meta"><span>'+e(r.date)+'</span><span>&bull;</span><span>via '+e(r.source)+'</span></div></div>';
+        }
+      })();
+      </script>`;
 
         // Replace the random hero placeholder
         const rhStart = newsHtml.indexOf('<div class="news-hero news-hero--secondary"');
@@ -1267,8 +1289,8 @@ ${latestHtml}
         newsHtml = newsHtml.substring(0, lpStart) + lpInner + '\n\n        <!-- Most Popular Posts' + newsHtml.substring(lpEnd + '</div>\n\n        <!-- Most Popular Posts'.length);
       }
 
-      // ─── Most Popular Posts sidebar (5 items) ───
-      const popularItems = validItems.slice(4, 9);
+      // ─── Most Popular Posts sidebar (4 items) ───
+      const popularItems = validItems.slice(4, 8);
       const popularHtml = popularItems.map((it, i) => {
         return `          <div class="news-popular-post">
             <span class="news-popular-post__num">${i + 1}</span>
