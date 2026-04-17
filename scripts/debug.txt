@@ -1,0 +1,38 @@
+				<h5 class="widget__title">Join our team</h5>
+								<div class="widget__content">
+									<p>
+										Weâ€™re always looking for new talent to join our teams. If you wanna join us, just send us and email and weâ€™ll get back to you!
+									</p>
+									<div class="info-box">
+										<div class="info-box__label">Max Parker - Recruiter</div>
+										<div class="info-box__content"><a href="mailto:#">mp-recruit<span class="color-primary">@</span>dragonsshadow.com</a></div>
+									</div>
+									<div class="info-box">
+										<div class="info-box__label">Be our partner!</div>
+										<div class="info-box__content"><a href="mailto:#">partners<span class="color-primary">@</span>dragonsshadow.com</a></div>
+									</div>
+								</div>
+							</section>
+							<!-- Widget: Text / End -->
+						</div>
+						<div class="col-md-12 col-lg-6 col-xl-5 offset-xl-2 mt-5 mt-lg-0">
+							<!-- Widget: Contact Info -->
+							<section class="widget widget-contact-info">
+								<h5 class="widget__title">Contact Info</h5>
+								<div class="widget__content">
+									<p>
+										If you have any questions, just send us and email and donâ€™t forget to follow and like all our social accounts to keep updated!
+									</p>
+									<div class="info-box">
+										<div class="info-box__label">General inquiries</div>
+										<div class="info-box__content"><a href="mailto:#">inquiries<span class="color-primary">@</span>dragonsshadow.com</a></div>
+									</div>
+									<ul class="social-menu social-menu--default">
+										<li><a href="#" data-social="facebook"></a></li>
+										<li><a href="#" data-social="twitter"></a></li>
+										<li><a href="https://twitch.tv"></a></li>
+										<li><a href="https://discord.gg/xxxx"></a></li>
+									</ul>
+								</div>
+							</section>
+							<!-- Widget: Contact Info / End -->

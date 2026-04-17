@@ -2432,6 +2432,41 @@ article.post-grid,
   .news-feed-card {
     flex-direction: column;
   }
+}
+
+/* ── Additional Social Menu Icons ── */
+.social-menu a[href*="github.com"]::before,
+.post__sharing a[href*="github.com"]::before {
+  content: "\f09b";
+}
+.social-menu a[href*="bsky.app"]::before,
+.post__sharing a[href*="bsky.app"]::before {
+  content: "\f0c2";
+}
+.social-menu a[href*="tiktok.com"]::before,
+.post__sharing a[href*="tiktok.com"]::before {
+  content: "\e07b";
+}
+.social-menu a[href*="curseforge.com"]::before,
+.post__sharing a[href*="curseforge.com"]::before {
+  content: "\f06d";
+}
+.post__sharing a[href*="github.com"],
+.social-menu.social-menu--links a[href*="github.com"] {
+  background-color: #333;
+}
+.post__sharing a[href*="bsky.app"],
+.social-menu.social-menu--links a[href*="bsky.app"] {
+  background-color: #0085ff;
+}
+.post__sharing a[href*="tiktok.com"],
+.social-menu.social-menu--links a[href*="tiktok.com"] {
+  background-color: #010101;
+}
+.post__sharing a[href*="curseforge.com"],
+.social-menu.social-menu--links a[href*="curseforge.com"] {
+  background-color: #f16436;
+}
   .news-feed-card__thumb {
     width: 100%;
     height: 180px;

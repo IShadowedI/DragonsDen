@@ -157,10 +157,10 @@
 					</svg>
 					<span class="header-social-toggle__plus">&nbsp;</span>
 					<ul class="social-menu social-menu--header">
-						<li><a href="https://discord.gg/xxxx"><span class="link-subtitle">Discord</span>Necrochat</a></li>
-						<li><a href="https://twitch.tv/"><span class="link-subtitle">Twitch</span>Necroplay</a></li>
-						<li><a href="#" data-social="twitter"><span class="link-subtitle">Twitter</span>Necrotwt</a></li>
-						<li><a href="#" data-social="facebook"><span class="link-subtitle">Facebook</span>Necrogame</a></li>
+						<li><a href="https://www.youtube.com/channel/UC6cBaDPwZoDH5oTpnMd3CRw" target="_blank" rel="noopener"><span class="link-subtitle">YouTube</span>Videos</a></li>
+						<li><a href="https://www.twitch.tv/lshadowedl" target="_blank" rel="noopener"><span class="link-subtitle">Twitch</span>Live</a></li>
+						<li><a href="https://bsky.app/profile/ishadowedi.bsky.social" target="_blank" rel="noopener"><span class="link-subtitle">Bluesky</span>Updates</a></li>
+						<li><a href="https://github.com/IShadowedI" target="_blank" rel="noopener"><span class="link-subtitle">GitHub</span>Projects</a></li>
 					</ul>
 				</div>
 				<div class="header-cart-toggle">
@@ -170,7 +170,7 @@
 					<svg role="img" class="df-icon df-icon--close">
 						<use xlink:href="../assets/img/necromancers.svg#close"/>
 					</svg>
-					<span class="header-cart-toggle__items-count">4</span>
+					<span class="header-cart-toggle__items-count">0</span>
 				</div>
 				<div class="header-search-toggle">
 					<svg role="img" class="df-icon df-icon--search">
@@ -181,26 +181,23 @@
 					</svg>
 				</div>
 				<div class="header-account hide">
-					<div class="header-account__avatar">
-						<img src="../assets/img/samples/account-user-avatar.jpg" srcset="../assets/img/samples/account-user-avatar@2x.jpg 2x" alt="">
-					</div>
-					<div class="header-account__body">
-						Hello!
-						<div class="header-account__name">James Spiegel</div>
-					</div>
-					<div class="header-account__icon">
-						<a href="../shop-account-settings.html">
-							<svg role="img" class="df-icon df-icon--account">
-								<use xlink:href="../assets/img/necromancers.svg#account"/>
-							</svg>
-						</a>
-						<a href="../login-register.html">
-							<svg role="img" class="df-icon df-icon--logout">
-								<use xlink:href="../assets/img/necromancers.svg#logout"/>
-							</svg>
-						</a>
-					</div>
+				<div class="header-account__avatar">
+					<svg role="img" class="df-icon df-icon--account" style="width: 32px; height: 32px; fill: currentColor;">
+						<use xlink:href="../assets/img/necromancers.svg#account"/>
+					</svg>
 				</div>
+				<div class="header-account__body">
+					Welcome!
+					<div class="header-account__name">Guest</div>
+				</div>
+				<div class="header-account__icon">
+					<a href="../login-register.html" title="Sign In / Register">
+						<svg role="img" class="df-icon df-icon--account">
+							<use xlink:href="../assets/img/necromancers.svg#account"/>
+						</svg>
+					</a>
+				</div>
+			</div>
 				<div class="header-menu-toggle">
 					<div class="header-menu-toggle__inner">
 						<span>&nbsp;</span>
@@ -225,8 +222,8 @@
 						</figure>
 						<ul class="post__sharing">
 							<li class="post__sharing-item post__sharing-item--menu"><a href="../home.html"><i>&nbsp;</i></a></li>
-							<li class="post__sharing-item"><a href="#" data-social="facebook"></a></li>
-							<li class="post__sharing-item"><a href="#" data-social="twitter"></a></li>
+							<li class="post__sharing-item"><a href="#" data-social="facebook" onclick="window.open('https://www.facebook.com/sharer/sharer.php?u='+encodeURIComponent(window.location.href),'_blank','width=600,height=400');return false;"></a></li>
+							<li class="post__sharing-item"><a href="#" data-social="twitter" onclick="window.open('https://twitter.com/intent/tweet?url='+encodeURIComponent(window.location.href)+'&text='+encodeURIComponent(document.title),'_blank','width=600,height=400');return false;"></a></li>
 						</ul>
 						<div class="post__header">
 							<div class="post__cats h6">
@@ -302,7 +299,7 @@ async>
 
 		<!-- Cart Panel -->
 		<div class="cart-panel">
-			<h4 class="cart-panel__title text-white">Shopping Cart (<span class="cart-panel__items-count">4</span>)</h4>
+			<h4 class="cart-panel__title text-white">Shopping Cart (<span class="cart-panel__items-count">0</span>)</h4>
 			<div class="cart-panel__content">
 				<div class="table-responsive">
 					<table class="table shop-table">
@@ -315,67 +312,10 @@ async>
 						</thead>
 						<tbody>
 							<tr>
-								<td class="product__info">
-									<figure class="product__thumb">
-										<a href="#"><img src="../assets/img/cart-panel-img-01.jpg" alt=""></a>
-									</figure>
-									<div class="product__info-content">
-										<h5 class="product__name"><a href="#">Magimons Black Frame Print</a></h5>
-										<span class="product__cat">Framed Prints</span>
-										<span class="product__info-details">24"x12" | Glossy</span>
-									</div>
+								<td colspan="4" style="text-align: center; padding: 30px 0; color: #6c757d; border: none;">
+									<p style="margin: 0 0 10px; font-size: 14px;">Your cart is empty.</p>
+									<a href="../shop.html" class="btn btn-primary btn-sm">Browse the Shop</a>
 								</td>
-								<td class="product__quantity">
-									<div class="quantity-control">
-										<button class="quantity-control__minus">&nbsp;</button>
-										<input type="number" step="1" value="1" size="4">
-										<button class="quantity-control__plus">&nbsp;</button>
-									</div>
-								</td>
-								<td class="product__total"><span class="product__total-currency">$</span>38.00</td>
-								<td class="product__remove"><a href="#" class="product__remove-icon"></a></td>
-							</tr>
-							<tr>
-								<td class="product__info">
-									<figure class="product__thumb">
-										<a href="#"><img src="../assets/img/cart-panel-img-02.jpg" alt=""></a>
-									</figure>
-									<div class="product__info-content">
-										<h5 class="product__name"><a href="#">Dragon's Den Men's T-Shirt</a></h5>
-										<span class="product__cat">Clothing</span>
-										<span class="product__info-details">Black | Medium</span>
-									</div>
-								</td>
-								<td class="product__quantity">
-									<div class="quantity-control">
-										<button class="quantity-control__minus">&nbsp;</button>
-										<input type="number" step="1" value="2" size="4">
-										<button class="quantity-control__plus">&nbsp;</button>
-									</div>
-								</td>
-								<td class="product__total"><span class="product__total-currency">$</span>49.98</td>
-								<td class="product__remove"><a href="#" class="product__remove-icon"></a></td>
-							</tr>
-							<tr>
-								<td class="product__info">
-									<figure class="product__thumb">
-										<a href="#"><img src="../assets/img/cart-panel-img-03.jpg" alt=""></a>
-									</figure>
-									<div class="product__info-content">
-										<h5 class="product__name"><a href="#">Dragon's Den Ennamel Mug</a></h5>
-										<span class="product__cat">Coffee Mugs</span>
-										<span class="product__info-details">White</span>
-									</div>
-								</td>
-								<td class="product__quantity">
-									<div class="quantity-control">
-										<button class="quantity-control__minus">&nbsp;</button>
-										<input type="number" step="1" value="1" size="4">
-										<button class="quantity-control__plus">&nbsp;</button>
-									</div>
-								</td>
-								<td class="product__total"><span class="product__total-currency">$</span>16.00</td>
-								<td class="product__remove"><a href="#" class="product__remove-icon"></a></td>
 							</tr>
 						</tbody>
 					</table>
@@ -386,19 +326,13 @@ async>
 							<tfoot>
 								<tr class="cart-panel__subtotal">
 									<th>Cart Subtotal</th>
-									<td>
-										<span class="amount"><span class="amount-currency">$</span>103.98</span>
-									</td>
-								</tr>
-								<tr class="cart-panel__shipping">
-									<th>Estimated Shipping</th>
-									<td><span class="amount"><span class="amount-currency">$</span>14.00</span></td>
+									<td><span class="amount"><span class="amount-currency">$</span>0.00</span></td>
 								</tr>
 								<tr class="cart-panel__order-total">
 									<th>Cart Total</th>
-									<td><span class="amount"><span class="amount-currency">$</span>117.98</span></td>
+									<td><span class="amount"><span class="amount-currency">$</span>0.00</span></td>
 								</tr>
-								</tfoot>
+							</tfoot>
 						</table>
 						<a href="../shop-checkout.html" class="btn btn-primary">Go to checkout</a>
 					</div>
@@ -492,10 +426,12 @@ async>
 					</a>
 					<div id="mobile_collapse_2" class="collapse mobile-bar-item__body">
 						<ul class="social-menu social-menu--mobile-bar">
-							<li><a href="#" data-social="facebook"><span>Facebook</span></a></li>
-							<li><a href="#" data-social="twitter"><span>Twitter</span></a></li>
-							<li><a href="https://twitch.tv"><span>Twitch</span></a></li>
-							<li><a href="https://discordapp.com"><span>Discord</span></a></li>
+							<li><a href="https://www.youtube.com/channel/UC6cBaDPwZoDH5oTpnMd3CRw" target="_blank" rel="noopener" data-social="youtube"><span>YouTube</span></a></li>
+							<li><a href="https://www.twitch.tv/lshadowedl" target="_blank" rel="noopener" data-social="twitch"><span>Twitch</span></a></li>
+							<li><a href="https://github.com/IShadowedI" target="_blank" rel="noopener" data-social="github"><span>GitHub</span></a></li>
+							<li><a href="https://bsky.app/profile/ishadowedi.bsky.social" target="_blank" rel="noopener" data-social="bluesky"><span>Bluesky</span></a></li>
+							<li><a href="https://www.tiktok.com/@ishadowedi" target="_blank" rel="noopener" data-social="tiktok"><span>TikTok</span></a></li>
+							<li><a href="https://www.curseforge.com/members/lshadowedl/projects" target="_blank" rel="noopener" data-social="curseforge"><span>CurseForge</span></a></li>
 						</ul>
 					</div>
 				</li>
@@ -508,16 +444,12 @@ async>
 						<div class="mobile-bar-item__inner">
 							<ul class="list-unstyled">
 								<li class="info-box">
-									<div class="info-box__label">Max Parker - Recruiter</div>
-									<div class="info-box__content"><a href="mailto:#">mp-recruit<span class="color-primary">@</span>dragonsshadow.com</a></div>
-								</li>
-								<li class="info-box">
-									<div class="info-box__label">Be our partner!</div>
-									<div class="info-box__content"><a href="mailto:#">partners<span class="color-primary">@</span>dragonsshadow.com</a></div>
+									<div class="info-box__label">Socials Hub</div>
+									<div class="info-box__content"><a href="https://shadoweds.carrd.co/" target="_blank" rel="noopener">shadoweds.carrd.co</a></div>
 								</li>
 								<li class="info-box">
 									<div class="info-box__label">General inquiries</div>
-									<div class="info-box__content"><a href="mailto:#">inquiries<span class="color-primary">@</span>dragonsshadow.com</a></div>
+									<div class="info-box__content"><a href="mailto:inquiries@dragonsshadow.com">inquiries<span class="color-primary">@</span>dragonsshadow.com</a></div>
 								</li>
 							</ul>
 						</div>
@@ -1708,46 +1640,44 @@ async>
 				<div class="menu-panel__widget-area">
 					<div class="row">
 						<div class="col-md-12 col-lg-6 col-xl-5">
-							<!-- Widget: Text -->
+							<!-- Widget: About Shadow -->
 							<section class="widget widget-text">
-								<h5 class="widget__title">Join our team</h5>
+								<h5 class="widget__title">About IShadowedI</h5>
 								<div class="widget__content">
 									<p>
-										We’re always looking for new talent to join our teams. If you wanna join us, just send us and email and we’ll get back to you!
+										Creator, developer, and the mind behind Dragon’s Den. Building tools, games, and communities for tabletop fans and creators alike.
 									</p>
 									<div class="info-box">
-										<div class="info-box__label">Max Parker - Recruiter</div>
-										<div class="info-box__content"><a href="mailto:#">mp-recruit<span class="color-primary">@</span>dragonsshadow.com</a></div>
+										<div class="info-box__label">Socials Hub</div>
+										<div class="info-box__content"><a href="https://shadoweds.carrd.co/" target="_blank" rel="noopener">shadoweds.carrd.co</a></div>
 									</div>
 									<div class="info-box">
-										<div class="info-box__label">Be our partner!</div>
-										<div class="info-box__content"><a href="mailto:#">partners<span class="color-primary">@</span>dragonsshadow.com</a></div>
+										<div class="info-box__label">Get in touch</div>
+										<div class="info-box__content"><a href="mailto:inquiries@dragonsshadow.com">inquiries<span class="color-primary">@</span>dragonsshadow.com</a></div>
 									</div>
 								</div>
 							</section>
-							<!-- Widget: Text / End -->
+							<!-- Widget: About Shadow / End -->
 						</div>
 						<div class="col-md-12 col-lg-6 col-xl-5 offset-xl-2 mt-5 mt-lg-0">
-							<!-- Widget: Contact Info -->
+							<!-- Widget: Shadow's Links -->
 							<section class="widget widget-contact-info">
-								<h5 class="widget__title">Contact Info</h5>
+								<h5 class="widget__title">Shadow’s Links</h5>
 								<div class="widget__content">
 									<p>
-										If you have any questions, just send us and email and don’t forget to follow and like all our social accounts to keep updated!
+										Follow IShadowedI across the web — subscribe, watch live, and check out the latest projects.
 									</p>
-									<div class="info-box">
-										<div class="info-box__label">General inquiries</div>
-										<div class="info-box__content"><a href="mailto:#">inquiries<span class="color-primary">@</span>dragonsshadow.com</a></div>
-									</div>
 									<ul class="social-menu social-menu--default">
-										<li><a href="#" data-social="facebook"></a></li>
-										<li><a href="#" data-social="twitter"></a></li>
-										<li><a href="https://twitch.tv"></a></li>
-										<li><a href="https://discord.gg/xxxx"></a></li>
+										<li><a href="https://www.youtube.com/channel/UC6cBaDPwZoDH5oTpnMd3CRw" target="_blank" rel="noopener" data-social="youtube"></a></li>
+										<li><a href="https://www.twitch.tv/lshadowedl" target="_blank" rel="noopener" data-social="twitch"></a></li>
+										<li><a href="https://github.com/IShadowedI" target="_blank" rel="noopener" data-social="github"></a></li>
+										<li><a href="https://bsky.app/profile/ishadowedi.bsky.social" target="_blank" rel="noopener" data-social="bluesky"></a></li>
+										<li><a href="https://www.tiktok.com/@ishadowedi" target="_blank" rel="noopener" data-social="tiktok"></a></li>
+										<li><a href="https://www.curseforge.com/members/lshadowedl/projects" target="_blank" rel="noopener" data-social="curseforge"></a></li>
 									</ul>
 								</div>
 							</section>
-							<!-- Widget: Contact Info / End -->
+							<!-- Widget: Shadow's Links / End -->
 						</div>
 					</div>
 					<div class="row">
