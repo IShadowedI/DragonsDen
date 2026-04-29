@@ -1,0 +1,40 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 400 225" width="400" height="225">
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#07060d"/>
+      <stop offset="100%" stop-color="#0c0a18"/>
+    </linearGradient>
+    <linearGradient id="bar" x1="0%" y1="0%" x2="100%" y2="0%">
+      <stop offset="0%" stop-color="#8b5cf6"/>
+      <stop offset="100%" stop-color="#6d28d9"/>
+    </linearGradient>
+    <linearGradient id="glow" x1="50%" y1="0%" x2="50%" y2="100%">
+      <stop offset="0%" stop-color="#8b5cf6" stop-opacity="0.18"/>
+      <stop offset="100%" stop-color="#8b5cf6" stop-opacity="0"/>
+    </linearGradient>
+  </defs>
+  <!-- Background -->
+  <rect width="400" height="225" fill="url(#bg)"/>
+  <!-- Glow -->
+  <ellipse cx="200" cy="80" rx="160" ry="80" fill="url(#glow)"/>
+  <!-- Cinematic letterbox bars -->
+  <rect x="0" y="0" width="400" height="28" fill="url(#bar)" rx="0"/>
+  <rect x="0" y="197" width="400" height="28" fill="url(#bar)" rx="0"/>
+  <!-- Frame outline -->
+  <rect x="16" y="36" width="368" height="153" fill="none" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.35" rx="2"/>
+  <!-- Inner frame decorative corners -->
+  <path d="M16,36 L36,36 M16,36 L16,56" stroke="#8b5cf6" stroke-width="2" fill="none"/>
+  <path d="M384,36 L364,36 M384,36 L384,56" stroke="#8b5cf6" stroke-width="2" fill="none"/>
+  <path d="M16,189 L36,189 M16,189 L16,169" stroke="#8b5cf6" stroke-width="2" fill="none"/>
+  <path d="M384,189 L364,189 M384,189 L384,169" stroke="#8b5cf6" stroke-width="2" fill="none"/>
+  <!-- Title text -->
+  <text x="200" y="100" font-family="Rajdhani, sans-serif" font-size="28" font-weight="700" fill="#fff" text-anchor="middle" letter-spacing="3">CINEMATIC 2.35:1</text>
+  <text x="200" y="128" font-family="Rajdhani, sans-serif" font-size="13" font-weight="500" fill="#c4b5fd" text-anchor="middle" letter-spacing="2">STORYBOARD TEMPLATE PACK</text>
+  <!-- Divider line -->
+  <line x1="120" y1="142" x2="280" y2="142" stroke="#8b5cf6" stroke-width="1" stroke-opacity="0.5"/>
+  <!-- Sub-text -->
+  <text x="200" y="162" font-family="Rajdhani, sans-serif" font-size="12" fill="#a59cc4" text-anchor="middle" letter-spacing="1">45 PNG TEMPLATES + NAMING GUIDE</text>
+  <!-- Top bar label -->
+  <text x="12" y="18" font-family="Rajdhani, sans-serif" font-size="10" font-weight="700" fill="#e9d5ff" letter-spacing="2">FRAMESHADOW</text>
+  <text x="388" y="18" font-family="Rajdhani, sans-serif" font-size="10" font-weight="700" fill="#e9d5ff" text-anchor="end" letter-spacing="1">FREE</text>
+</svg>
