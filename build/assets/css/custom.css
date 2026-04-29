@@ -2428,27 +2428,17 @@ article.post-grid,
    been observed to leave pointer-events catching clicks; force them off
    unless the preloader is active.
    -------------------------------------- */
-.site-header,
-.site-header--bottom {
-  position: relative;
-  z-index: 1500;
+/* The template already sets position:fixed on .site-header--top/.site-header--bottom
+   (z-index 1105) and .site-overlay is 1100, so the header is already above overlays.
+   DO NOT set position here — that would override fixed→relative and break the dock.
+   Just keep z-index safely above the overlay. */
+.site-header {
+  z-index: 1200;
 }
-.main-nav,
-.main-nav__list,
-.main-nav__list > li,
-.main-nav__list > li > a {
-  position: relative;
-  z-index: 2;
-}
+
+/* Preloader overlay: disable pointer-events when off-screen (slid down via translateY) */
 .preloader-overlay { pointer-events: none; }
 .preloader-is--active .preloader-overlay { pointer-events: auto; }
-
-/* Off-canvas / cart overlay should not eat clicks unless explicitly opened */
-.site-overlay { pointer-events: none; }
-.site-overlay-is--active .site-overlay,
-.cart-is--active .site-overlay,
-.search-is--active .site-overlay,
-.nav-is--active .site-overlay { pointer-events: auto; }
 
 /* --------------------------------------
    Image-only project card (used by FrameShadow on home.html)
