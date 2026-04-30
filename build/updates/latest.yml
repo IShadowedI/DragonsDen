@@ -1,8 +1,8 @@
-version: 0.5.6
+version: 0.5.7
 files:
-  - url: https://github.com/IShadowedI/DragonsDen/releases/download/v0.5.6/FrameShadow-Setup-x64.exe
-    sha512: QrrzAHOWMdA7iQ3+c3c6dAM2Gxq+YjxBtZh6dGvmRlgPGOwoE8AnWU8yKC65TI184T6OUwMafHwTsCYMqi3XEw==
-    size: 116080835
+  - url: https://github.com/IShadowedI/DragonsDen/releases/download/v0.5.7/FrameShadow-Setup-x64.exe
+    sha512: dv2XDCKMyL2LFmL0WUK+8dqhOnVZ7/vd+BWh1MQMOFeJdUH1GWNrZa3g4SEt6dcAxzvoOcOa0C5G8ga6qywXaw==
+    size: 115979151
 path: FrameShadow-Setup-x64.exe
-sha512: QrrzAHOWMdA7iQ3+c3c6dAM2Gxq+YjxBtZh6dGvmRlgPGOwoE8AnWU8yKC65TI184T6OUwMafHwTsCYMqi3XEw==
-releaseDate: '2026-04-30T00:08:23.350Z'
+sha512: dv2XDCKMyL2LFmL0WUK+8dqhOnVZ7/vd+BWh1MQMOFeJdUH1GWNrZa3g4SEt6dcAxzvoOcOa0C5G8ga6qywXaw==
+releaseDate: '2026-04-30T00:17:18.630Z'
