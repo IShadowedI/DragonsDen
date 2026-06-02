@@ -1,0 +1,1861 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+	<!-- Basic Page Needs
+	================================================== -->
+	<title>[40k] 11th Edition Rules Deep Dive: Special Unit Types - Dragon's Den</title>
+	<meta charset="utf-8">
+	<link rel="preconnect" href="https://fonts.googleapis.com" crossorigin>
+	<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+	<link rel="dns-prefetch" href="https://cdn.snipcart.com">
+	<link rel="dns-prefetch" href="https://pagead2.googlesyndication.com">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="description" content="This article is our deep dive on how some special types of Unit work in 11th Edition, covering VEHICLEs, MONSTERs and Leaders. As with all of our Deep Dives, we’re focusing on what’s changed in the...">
+	<meta name="author" content="Dragon's Den">
+	<meta name="keywords" content="tabletop, D&amp;D, dungeons and dragons, RPG, streaming, creator tools, Dragon's Den">
+
+	<!-- Favicons
+	================================================== -->
+	<link rel="shortcut icon" href="../assets/img/dragon/app/DragonCircleLogo.png">
+	<link rel="apple-touch-icon" sizes="120x120" href="../assets/img/dragon/app/DragonCircleLogo.png">
+	<link rel="apple-touch-icon" sizes="152x152" href="../assets/img/dragon/app/DragonCircleLogo.png">
+
+	<!-- Mobile Specific Metas
+	================================================== -->
+	<meta name="viewport" content="width=device-width,initial-scale=1.0">
+	<!-- Open Graph / Facebook -->
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://dragonsshadow.com/blog-post.html">
+	<meta property="og:title" content="Dragon's Den — News">
+	<meta property="og:description" content="Tabletop gaming news, creator spotlights, and community updates.">
+	<meta property="og:image" content="https://dragonsshadow.com/assets/img/dragon/app/DragonCircleLogo.png">
+	<meta property="og:site_name" content="Dragon's Den">
+
+	<!-- Twitter Card -->
+	<meta name="twitter:card" content="summary_large_image">
+	<meta name="twitter:url" content="https://dragonsshadow.com/blog-post.html">
+	<meta name="twitter:title" content="Dragon's Den — News">
+	<meta name="twitter:description" content="Tabletop gaming news, creator spotlights, and community updates.">
+	<meta name="twitter:image" content="https://dragonsshadow.com/assets/img/dragon/app/DragonCircleLogo.png">
+
+	<!-- Canonical -->
+	<link rel="canonical" href="https://dragonsshadow.com/blog-post.html">
+
+	<!-- Google Web Fonts
+	================================================== -->
+	<link href="https://fonts.googleapis.com/css?family=Rajdhani:300,400,500,600,700" rel="stylesheet">
+
+	<!-- CSS
+	================================================== -->
+	<!-- Vendor CSS -->
+	<link href="../assets/vendor/magnific-popup/css/magnific-popup.css" rel="stylesheet">
+	<link href="../assets/vendor/slick/css/slick.css" rel="stylesheet">
+	<link href="../assets/vendor/nanoscroller/css/nanoscroller.css" rel="stylesheet">
+	<link href="../assets/vendor/fontawesome/css/brands.css" rel="stylesheet">
+
+	<!-- Template CSS-->
+	<link href="../assets/css/style.css?v=1775952328" rel="stylesheet">
+
+	<!-- Dragon Theme CSS -->
+	<link href="../assets/css/dragon.css" rel="stylesheet">
+
+	<!-- Custom CSS-->
+	<link href="../assets/css/custom.css?v=1777482744" rel="stylesheet">
+
+
+	<!-- Snipcart E-Commerce -->
+	<style>
+		/* Dark theme overrides for Snipcart modal */
+		.snipcart-modal__container { z-index: 99999 !important; }
+		.snipcart { --color-default: #fff; --color-alt: rgba(255,255,255,0.7); --borderColor-default: rgba(255,255,255,0.1); --bgColor-default: #13151e; --bgColor-alt: #1a1c28; --bgColor-input: #0e1019; --color-input: #fff; --color-inputLabel: rgba(255,255,255,0.6); --borderColor-input: rgba(255,255,255,0.15); --color-badge: #fff; --bgColor-badge: #8B0000; --color-link: #FF4D4D; --color-link-hover: #ff6b6b; --color-icon: #FF4D4D; --bgColor-buttonPrimary: #8B0000; --bgColor-buttonPrimary-hover: #a00000; --color-buttonPrimary: #fff; --bgColor-buttonSecondary: transparent; --color-buttonSecondary: #FF4D4D; --borderColor-buttonSecondary: #8B0000; --borderColor-buttonSecondary-hover: #FF4D4D; }
+		.snipcart-cart-header { background: #0e1019 !important; }
+		.snipcart-item-line { border-color: rgba(255,255,255,0.06) !important; }
+	</style>
+
+	<!-- Google AdSense -->
+	<script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-5492466041818466" crossorigin="anonymous"></script>
+	<link rel="manifest" href="manifest.json">
+<script type="application/ld+json">{"@context":"https://schema.org","@type":"NewsArticle","headline":"[40k] 11th Edition Rules Deep Dive: Special Unit Types","datePublished":"Mon, 01 Jun 2026 09:06:51 GMT","description":"Part 7 of our rules deep dive looks at how special units like Leaders, Monsters, Vehicles and Aircraft have changed in Warhammer 40K 11th Edition. #AdWIP #New40k #WarhammerCommunity ","publisher":{"@type":"Organization","name":"Dragon's Den"},"mainEntityOfPage":{"@type":"WebPage","@id":"https://dragonsshadow.com/posts/40k-11th-edition-rules-deep-dive-special-unit-types.html"}}</script>
+</head>
+
+<body class="preloader-is--active ">
+
+	<div class="site-wrapper site-layout--default">
+
+		<!-- Header
+		================================================== -->
+		<header id="header" class="site-header site-header--bottom">
+		
+			<!-- Logo - Image Based -->
+			<div class="header-logo header-logo--img">
+				<a href="../index.html"><img src="../assets/img/dragon/app/DragonCircleLogo.png" srcset="../assets/img/dragon/app/DragonCircleLogo.png 2x" alt="Dragon's Den"></a>
+			</div>
+			<!-- Logo - Image Based / End -->
+		
+		
+			<!-- Main Navigation -->
+			<nav class="main-nav">
+				<ul class="main-nav__list">
+					<li><a href="../home.html">Home</a></li>
+					<li><a href="../news.html">News</a></li>
+					<li><a href="../shop.html">Shop</a></li>
+					<li><a href="#">Features <span class="main-nav__toggle">&nbsp;</span></a>
+						<div class="main-nav__megamenu">
+							<div class="row">
+								<div class="mega-col mega-col--5">
+									<div class="mega-col__title"><span class="mega-icon"><img src="../assets/img/dragon/app/d20.png" class="mega-icon-img" alt="Projects"></span> Project Pages</div>
+									<ul>
+										<li><a href="../dragon.html"><span class="mega-link-icon"><img src="../assets/img/dragon/app/Dragon Horn Logo.png" class="mega-link-icon-img" alt="Dragon"></span>Dragon Social</a></li>
+										<li><a href="../little-grotto.html"><span class="mega-link-icon"><img src="../assets/img/dragon/app/GodotImage.png" class="mega-link-icon-img" alt="Little Grotto"></span>Little Grotto</a></li>
+										<li><a href="../shadow-coin.html"><span class="mega-link-icon"><img src="../assets/img/dragon/app/ShadowCoinLogo.png" class="mega-link-icon-img" alt="Shadow Coin"></span>Shadow Coin</a></li>
+									</ul>
+								</div>
+								<div class="mega-col mega-col--5">
+									<div class="mega-col__title"><span class="mega-icon"><img src="../assets/img/dragon/app/quill.png" class="mega-icon-img" alt="Creative"></span> Creative Projects</div>
+									<ul>
+										<li><a href="../midnight-coup.html"><span class="mega-link-icon"><img src="../assets/img/dragon/app/moon-icon.png" class="mega-link-icon-img" alt="Midnight Coup"></span>Midnight Coup</a></li>
+										<li><a href="../all-the-animals.html"><span class="mega-link-icon"><img src="../assets/img/dragon/app/paw-icon.png" class="mega-link-icon-img" alt="All the Animals"></span>All the Animals</a></li>
+										<li><a href="../obsidian-templates.html"><span class="mega-link-icon"><img src="../assets/img/dragon/app/gem-icon.png" class="mega-link-icon-img" alt="Obsidian Templates"></span>Obsidian Templates</a></li>
+									</ul>
+								</div>
+								<div class="mega-col mega-col--5">
+									<div class="mega-col__title"><span class="mega-icon"><img src="../assets/img/dragon/app/anvil.png" class="mega-icon-img" alt="Tools"></span> Tools and Utilities</div>
+									<ul>
+										<li><a href="../tools.html"><span class="mega-link-icon"><img src="../assets/img/dragon/app/anvil.png" class="mega-link-icon-img" alt="Tools"></span>Tool Suite</a></li>
+										<li><a href="#"><span class="mega-link-icon"><img src="../assets/img/dragon/app/monitor.png" class="mega-link-icon-img" alt="Utilities"></span>Utilities</a></li>
+										<li><a href="../plugins.html"><span class="mega-link-icon"><img src="../assets/img/dragon/app/spellbook.png" class="mega-link-icon-img" alt="Plugins"></span>Plugins</a></li>
+										<li><a href="#"><span class="mega-link-icon"><img src="../assets/img/dragon/app/shield.png" class="mega-link-icon-img" alt="Mods"></span>Mods</a></li>
+									</ul>
+								</div>
+								<div class="mega-col mega-col--5">
+									<div class="mega-col__title"><span class="mega-icon"><img src="../assets/img/dragon/app/mana.png" class="mega-icon-img" alt="Community"></span> Community</div>
+									<ul>
+										<li><a href="#"><span class="mega-link-icon"><img src="../assets/img/dragon/app/magnifying-glass-icon.png" class="mega-link-icon-img" alt="Browse"></span>Browse Community Creations</a></li>
+										<li><a href="../plugins-submit.html"><span class="mega-link-icon"><img src="../assets/img/dragon/app/teleport.png" class="mega-link-icon-img" alt="Submit Plugin"></span>Submit a Plugin</a></li>
+										<li><a href="#"><span class="mega-link-icon"><img src="../assets/img/dragon/app/edit.png" class="mega-link-icon-img" alt="Submit Mod"></span>Submit a Mod</a></li>
+										<li><a href="#"><span class="mega-link-icon"><img src="../assets/img/dragon/app/scroll.png" class="mega-link-icon-img" alt="Docs"></span>Creation Docs</a></li>
+									</ul>
+								</div>
+								<div class="mega-col mega-col--5">
+									<div class="mega-col__title"><span class="mega-icon"><img src="../assets/img/dragon/app/crystal-ball.png" class="mega-icon-img" alt="Details"></span> Details</div>
+									<ul>
+										<li><a href="../about.html"><span class="mega-link-icon"><img src="../assets/img/dragon/app/scroll.png" class="mega-link-icon-img" alt="About"></span>About</a></li>
+										<li><a href="#"><span class="mega-link-icon"><img src="../assets/img/dragon/app/swords.png" class="mega-link-icon-img" alt="Apply"></span>Apply</a></li>
+										<li><a href="../contact.html"><span class="mega-link-icon"><img src="../assets/img/dragon/app/inbox-icon.png" class="mega-link-icon-img" alt="Contact"></span>Contact</a></li>
+										<li><a href="../login-register.html"><span class="mega-link-icon"><img src="../assets/img/dragon/app/user-icon.png" class="mega-link-icon-img" alt="Account"></span>Account</a></li>
+									</ul>
+								</div>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</nav>
+			<!-- Main Navigation / End -->
+		
+			<!-- Header Actions -->
+			<div class="header-actions">
+				<div class="header-top-bar-toggle d-md-none hide">
+					<svg role="img" class="df-icon df-icon--joystick">
+						<use xlink:href="../assets/img/necromancers.svg#joystick"/>
+					</svg>
+					<svg role="img" class="df-icon df-icon--close">
+						<use xlink:href="../assets/img/necromancers.svg#close"/>
+					</svg>
+				</div>
+				<div class="header-social-toggle d-none d-md-block">
+					<svg role="img" class="df-icon df-icon--thumb-up">
+						<use xlink:href="../assets/img/necromancers.svg#thumb-up"/>
+					</svg>
+					<span class="header-social-toggle__plus">&nbsp;</span>
+					<ul class="social-menu social-menu--header">
+						<li><a href="https://www.youtube.com/channel/UC6cBaDPwZoDH5oTpnMd3CRw" target="_blank" rel="noopener"><span class="link-subtitle">YouTube</span>Videos</a></li>
+						<li><a href="https://www.twitch.tv/lshadowedl" target="_blank" rel="noopener"><span class="link-subtitle">Twitch</span>Live</a></li>
+						<li><a href="https://bsky.app/profile/ishadowedi.bsky.social" target="_blank" rel="noopener"><span class="link-subtitle">Bluesky</span>Updates</a></li>
+						<li><a href="https://github.com/IShadowedI" target="_blank" rel="noopener"><span class="link-subtitle">GitHub</span>Projects</a></li>
+					</ul>
+				</div>
+				<div class="header-cart-toggle">
+					<svg role="img" class="df-icon df-icon--bag">
+						<use xlink:href="../assets/img/necromancers.svg#bag"/>
+					</svg>
+					<svg role="img" class="df-icon df-icon--close">
+						<use xlink:href="../assets/img/necromancers.svg#close"/>
+					</svg>
+					<span class="header-cart-toggle__items-count">0</span>
+				</div>
+				<div class="header-search-toggle">
+					<svg role="img" class="df-icon df-icon--search">
+						<use xlink:href="../assets/img/necromancers.svg#search"/>
+					</svg>
+					<svg role="img" class="df-icon df-icon--search-close">
+						<use xlink:href="../assets/img/necromancers.svg#search-close"/>
+					</svg>
+				</div>
+				<div class="header-account hide">
+				<div class="header-account__avatar">
+					<svg role="img" class="df-icon df-icon--account" style="width: 32px; height: 32px; fill: currentColor;">
+						<use xlink:href="../assets/img/necromancers.svg#account"/>
+					</svg>
+				</div>
+				<div class="header-account__body">
+					Welcome!
+					<div class="header-account__name">Guest</div>
+				</div>
+				<div class="header-account__icon">
+					<a href="../login-register.html" title="Sign In / Register">
+						<svg role="img" class="df-icon df-icon--account">
+							<use xlink:href="../assets/img/necromancers.svg#account"/>
+						</svg>
+					</a>
+				</div>
+			</div>
+				<div class="header-menu-toggle">
+					<div class="header-menu-toggle__inner">
+						<span>&nbsp;</span>
+						<span>&nbsp;</span>
+						<span>&nbsp;</span>
+					</div>
+				</div>
+			</div>
+			<!-- Header Actions / End -->
+		</header>
+		<!-- Header / End -->
+
+		<!-- Content
+		================================================== -->
+		<main class="site-content" id="wrapper">
+			<div class="site-content__inner">
+				<div class="site-content__holder">
+					<!-- Post -->
+					<article class="post post--single">
+						<figure class="post__thumbnail">
+							<img src="../assets/img/samples/news-v1-post-img-02.jpg" alt="[40k] 11th Edition Rules Deep Dive: Special Unit Types">
+						</figure>
+						<ul class="post__sharing">
+							<li class="post__sharing-item post__sharing-item--menu"><a href="../home.html"><i>&nbsp;</i></a></li>
+							<li class="post__sharing-item"><a href="#" data-social="facebook"></a></li>
+							<li class="post__sharing-item"><a href="#" data-social="twitter"></a></li>
+						</ul>
+						<div class="post__header">
+							<div class="post__cats h6">
+								<span class="color-warning">Wargaming</span>
+							</div>
+							<h2 class="post__title h3">[40k] 11th Edition Rules Deep Dive: Special Unit Types</h2>
+							<div class="post__meta">
+								<span class="meta-item meta-item--date">June 1st, 2026</span>
+								<span class="meta-item meta-item--source">via <a href="https://www.goonhammer.com/11th-edition-40k-rules-deep-dive-special-unit-types/" target="_blank" rel="noopener noreferrer">Goonhammer</a></span>
+							</div>
+						</div>
+						<div class="post__body">
+							<span style="font-weight: 400;">This article is our deep dive on how some special types of Unit work in 11th Edition, covering VEHICLEs, MONSTERs and Leaders. As with all of our Deep Dives, we’re focusing on what’s changed in the new Edition.</span><br><p>This piece is aimed primarily at existing players, and we’re going to focus on what’s changed rather than digging into the full mechanics of the phase. If you’re a brand new player looking to dive into 11th Edition, we recommend you go and take a look at our main review, as that provides a full outline of how Warhammer 40,000 works on the tabletop!</p><p>As a note - for our review, we have been provided with access to the extended digital rules that will be made generally available in the Warhammer 40,000 app. This means that in a few places, we may talk about a rule or specific nuance that hasn’t been covered in previews or things you’ve seen elsewhere. We’ll try to flag the important ones!</p><br><i><span style="font-weight: 400;">Huge thanks to Games Workshop for providing us with review copies of all the material covered today. Please note that any digital material we refer to is subject to change until it is made available on Warhammer Community or the Warhammer 40k App.</span></i>
+<h1><span style="font-weight: 400;">Other Articles</span></h1>
+<p>If this isn’t the part of the rules you were looking for, or you’re wondering what to look at next, check out the links to all our deep dive articles below:
+</p><ul>
+<p> 	</p><li><a href="https://www.goonhammer.com/11th-edition-40k-rules-deep-dive-core-concepts/">11th Edition 40k Rules Deep Dive: Core Concepts</a></li>
+<p></p> 	<li><a href="https://www.goonhammer.com/11th-edition-40k-rules-deep-dive-command-phase/">11th Edition 40k Rules Deep Dive: Command Phase</a></li>
+<p> 	</p><li><a href="https://www.goonhammer.com/11th-edition-40k-rules-deep-dive-moving-and-the-movement-phase/">11th Edition 40k Rules Deep Dive: Moving and the Movement Phase</a></li>
+<p></p> 	<li><a href="https://www.goonhammer.com/11th-edition-40k-rules-deep-dive-attacks-and-the-shooting-phase/">11th Edition 40k Rules Deep Dive: Attacks and the Shooting Phase</a></li>
+<p> 	</p><li><a href="https://www.goonhammer.com/11th-edition-40k-rules-deep-dive-the-charge-and-fight-phases/">11th Edition 40k Rules Deep Dive: The Charge and Fight Phases</a></li>
+<p></p> 	<li><a href="https://www.goonhammer.com/11th-edition-40k-rules-deep-dive-terrain-and-objectives/">11th Edition 40k Rules Deep Dive: Terrain and Objectives</a></li>
+<p> 	</p><li><a href="https://www.goonhammer.com/11th-edition-40k-rules-deep-dive-special-unit-types/">11th Edition 40k Rules Deep Dive: Special Unit Types</a></li>
+<p></p> 	<li><a href="https://www.goonhammer.com/11th-edition-40k-rules-deep-dive-core-stratagems-and-abilities/">11th Edition 40k Rules Deep Dive: Core Stratagems and Abilities</a></li>
+</ul>
+<h1><span style="font-weight: 400;">Leaders and Attached Units</span></h1>
+<span style="font-weight: 400;">Some models, mostly Characters, have either the Leader or Support ability, which allows them to join other units to create a single </span><b>Attached</b><span style="font-weight: 400;"> Unit. These operate as a single unit on the Battlefield, usually becoming more than the sum of their parts.</span>
+<h2><span style="font-weight: 400;">Leaders and Support</span></h2>
+<small class="aligncenter"><img class="size-medium wp-image-194482" src="../assets/img/news/40k-11th-edition-rules-deep-dive-special-unit-types-1.jpg" alt=""> Cadian Command Squad. Credit: Campbell "SRM" McLaughlin</small><br><br><span style="font-weight: 400;">In 11th Edition, there are </span><b>two</b><span style="font-weight: 400;"> abilities that allow a unit to join other units, </span><b>Leader</b><span style="font-weight: 400;"> and </span><b>Support</b><span style="font-weight: 400;">. Each works in pretty much the same way - such a unit will specify which units it can lead, and during the Muster Armies step of the battle, you can attach them to those units.<p></p><p>Why are there two different rules that do the same thing? This serves two purposes:
+</p><ol>
+<p> 	</p><li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">It centralises rules that existed in 10th Edition allowing two Characters to join the same unit. Now, each unit can be joined by up to one Leader and up to one Support unit. As an example from the Armageddon box, the mighty Warboss is a Leader, while the Bannernob is Support, so if you want your Waaaagh’s leader </span><i><span style="font-weight: 400;">and</span></i><span style="font-weight: 400;"> a fancy flag in the same unit, you can have that.</span></li>
+<p></p> 	<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Support units </span><b>must</b><span style="font-weight: 400;"> join a unit during the Muster Armies step; they cannot choose to wander around the table solo. This is a slightly surprising change (and only appears in the extended App rules), and we suspect this is to close off a gap in 10th where Support-style Characters were often among the cheapest things in each Codex, so you saw them taken solo to sit on an objective rather than fulfil their intended buff role.</span></li>
+</ol>
+<span style="font-weight: 400;">We won’t know what the full impact of this is till we see which Characters get switched to be Support, but directionally its very likely to broaden the number of double attachment options; even just taking the Datasheets in the Armageddon box, Orks now have vastly more options to do so than in 10th!</span>
+<h2><span style="font-weight: 400;">Attachments Happen During Army Construction</span></h2>
+<span style="font-weight: 400;">Eagle-eyed readers may have spotted another change above - Attaching a Leader and/or Support unit to another unit now happens during Muster Armies, not the pre-game Battle Formations step. This simplifies list building a bit, but for my money is a little bit of a shame; 95% of the time when building a list in 10th the Attachments were fixed, but I quite liked the toolbox flexibility of being able to mix things up. I guess it will make Competitive Innovations easier to write though, because I won’t have to speculate in those 5% edge cases.</span>
+<h2><span style="font-weight: 400;">Attachment is Permanent</span></h2>
+<small class="aligncenter"><img class="size-medium wp-image-229524" src="../assets/img/news/40k-11th-edition-rules-deep-dive-special-unit-types-2.jpg" alt=""> Captain Titus and the Wardens of Ultramar. Credit: SRM</small><br><br><span style="font-weight: 400;">In 10th Edition, although Attached Units operated as a single force, it was still possible to destroy separate parts of them. Attached Units are still divided into the Leaders/Support models and </span><b>Bodyguard </b><span style="font-weight: 400;">models, which are those from the units that were joined, but if you run out of Bodyguard Models, or a Leader gets iced via </span><b>Precision</b><span style="font-weight: 400;">, no unit has been Destroyed for rules purposes, and the unit is still an Attached Unit.<p></p><p>This has three main impacts:
+</p><ul>
+<p> 	</p><li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">If your opponent needs to destroy a unit to fulfil a mission, they have to take out every last model, and units containing a Bodyguard, Leader and Support will no longer give up three kills for missions that care about the number.</span></li>
+<p></p> 	<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">As long as they are alive, Leader/Support models in an Attached are </span><b>always </b><span style="font-weight: 400;">“leading a unit” for the purpose of abilities they have which care about this. A Librarian no longer forgets how to provide an Invulnerable Save after running out of Bodyguard models (though this effect will stop if the Librarian dies - see below).</span></li>
+<p> 	</p><li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Effects that revive models can put a Bodyguard back together even if every Bodyguard model got wiped out. Be assured that as a Necron player I am </span><i><span style="font-weight: 400;">salivating</span></i><span style="font-weight: 400;"> at the prospect of this.</span></li>
+<p></p></ul>
+<span style="font-weight: 400;">Taken together with the timing changes, this means that if you’re building a big doomstack for your army, you are fully locked-in to that choice, but the unit you get will hold onto its benefits longer, and is less of a scoring liability in some missions.</span>
+<h2><span style="font-weight: 400;">Abilities in Attached Units</span></h2>
+<span style="font-weight: 400;">One of the big reasons to form Attached units is to let Leaders and Bodyguards benefit from one-another’s abilities. Most Leaders provide a buff to their units, and some units have abilities providing re-rolls that can soup up the damage output of more martial Leaders.<p></p><p>When either part of a unit has an ability, all models in it benefit <i><span style="font-weight: 400;">as long as</span></i><span style="font-weight: 400;"> at least one model from the Datasheet that provides the ability is still alive. This means that although an Attached unit is now a permanent fixture, you can still strip away powerful Leader effects by using Precision and the like.</span></p><p>An exception to this is abilities (such as those provided by Wargear) that only affect a specified bearer - these obviously still only affect the specific model, and stop working if that model is destroyed.</p><br><b><i>Note:</i></b><i><span style="font-weight: 400;"> One of the things we’re not totally sure about is how this works with some Core Abilities, such as </span></i><b><i>Feel No Pain</i></b><i><span style="font-weight: 400;"> and </span></i><b><i>Infiltrators</i></b><i><span style="font-weight: 400;">, where only one Datasheet in the Attached Unit has them. Based on the Attached units rules, it looks like these might propagate automatically, but the wording in the Core Abilities suggests that it still cares about which specific models have the ability. We’re hoping for a clarification on this, as especially for Feel No Pain, it seems unlikely the intention is that every Leader with one can now provide that as an extra unit-wide bonus!</span></i>
+<h2><span style="font-weight: 400;">Keywords In Attached Units</span></h2>
+<p>Different Datasheets that form an Attached unit may have different Keywords. When an attached unit forms, each model still only has the Keywords provided by its own Datasheet, but the Attached Unit has all the Keywords. This can make the whole unit eligible for powerful buffs from Stratagems and Detachment Rules, but also makes them vulnerable to rules like <b>Anti.</b><br><br><span style="font-weight: 400;">One thing that’s not totally clear in the rulebook is whether effects that require a certain Keyword affect or can target an Attached unit where every model with that Keyword has been Destroyed. The answer to this is provided in the extended App rules - they </span><b>cannot</b><span style="font-weight: 400;">, so if you want to use a buff for INTERCESSORS on an Attached Unit of five Intercessors and a Captain, at least one Intercessor needs to be alive. For the smart-ass at the back raising their hand to ask if that creates weird issues with timing on </span><b>Anti- </b><span style="font-weight: 400;">weapons; no, they thought ot that, and:</span>
+</p><ol>
+<p> 	</p><li style="font-weight: 400;" aria-level="1"><b>Anti-</b><span style="font-weight: 400;"> is determined at target time.</span></li>
+<p></p> 	<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">In 11th, models destroyed by attacks are not removed until the attacking unit has resolved all of its attacks.</span></li>
+</ol>
+<h1><span style="font-weight: 400;">Monsters &amp; Vehicles</span></h1>
+<span style="font-weight: 400;">All armies in Warhammer 40K can bring either mechanical war machines or terrifying monsters (or both) to bear, and these are designated by the VEHICLE and MONSTER keywords. These have some general rules that apply to them.</span>
+<h2><span style="font-weight: 400;">Moving Monsters &amp; Vehicles</span></h2>
+<small class="aligncenter"><img class="size-medium wp-image-11051" src="../assets/img/news/40k-11th-edition-rules-deep-dive-special-unit-types-3.jpg" alt="Night Spinner"> Night Spinner. Credit: Wings</small><br><br><span style="font-weight: 400;">Monsters and Vehicles have two differences in how they move around the Battlefield:</span>
+<ul>
+<p> 	</p><li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Normally you can move through friendly models, but Monsters/Vehicles cannot move through other models with these Keywords. They’re too big and would smash into each other!</span></li>
+<p></p> 	<li style="font-weight: 400;" aria-level="1"><span style="font-weight: 400;">Normally you </span><i><span style="font-weight: 400;">cannot</span></i><span style="font-weight: 400;"> move through enemy models. When making a Normal or Advance move, Monsters and Vehicles </span><i><span style="font-weight: 400;">can</span></i><span style="font-weight: 400;"> move through enemy models that do not share the Monster/Vehicle keyword.</span></li>
+</ul>
+<span style="font-weight: 400;">The first part is the same as in 10th Edition, but the second is new, and makes it harder to fully trap and move-block big models with a line or circle of chaff. One of my least edifying games of 10th Edition involved my Avatar of Khaine being trapped against a wall by three consecutive 5-model units of Drukhari Wyches forming a little ring turn after turn. In 11th, the Avatar could simply walk out and leave.</span>
+<h2><span style="font-weight: 400;">Frame</span></h2>
+<span style="font-weight: 400;">Some Monster/Vehicle models don’t have bases, or protrude considerably beyond them. In this case, they are given the FRAME keyword, which indicates that when placing and measuring distances to the model, all parts of the model are used (the closest, for distance), not just the base. This codifies “measure to hull” into an actual Keyword and rule, which is a big relief all-round.<p></p><p>Frame also explains how you pivot a model without a base - you do so around the central point of the model.
+</p><h2><span style="font-weight: 400;">Towering and Plunging Fire</span></h2>
+<small class="aligncenter"><img class="size-medium wp-image-111452" src="../assets/img/news/40k-11th-edition-rules-deep-dive-special-unit-types-4.jpg" alt="Knight Abominant - Norman"> Knight Abominant - Norman</small><br><br><span style="font-weight: 400;">Some especially large units have the TOWERING keyword, looming large across the Battlefield. In 10th Edition, this modified how they could see and be seen through terrain, but that’s no longer the case in 11th.<p></p><p>Instead, any model with TOWERING that is making ranged attacks against visible foes on ground level that are within 12” automatically benefits from the Plunging Fire rule, getting +1 to their BS. This makes aggressive shooting plays by Imperial and Chaos Knight armies especially terrifying to foes!
+</p><h3>Shooting and Engaged Monsters/Vehicles</h3>
+<p>Monsters and Vehicles are so large that the enemy can safely shoot at them even when their forces are in Engagement Range. They suffer a -1 penalty to hit while doing so, unless they're engaged with it and shooting Close-Quarters weapons.
+</p><h1><span style="font-weight: 400;">Aircraft</span></h1>
+<span style="font-weight: 400;">Some factions bring close air support to the battlefield, raking the battlefield with firepower from planes or winged creatures. These have always been a bit awkward, rules-wise, and 11th Edition overhauls them yet again.</span>
+<h2><span style="font-weight: 400;">Moving Aircraft</span></h2>
+<span style="font-weight: 400;">In 11th Edition, Aircraft do not have a Movement Characteristic, and can only ever perform an Ingress Move. At the end of your opponent’s turn, each Aircraft unit you control that’s on the Battlefield must be placed into Strategic Reserves, ready to Ingress again on the following turn. Essentially, Aircraft now make true strafing runs, appearing, shooting, and then vanishing again after the enemy has had a window to fire back or try and smash them from the sky. Aircraft must also start the battle in Strategic Reserves (and do use up your points allocation for reserves), so can only start doing this from the second Battle Round onwards unless they have an ability that lets them do otherwise.&nbsp;<p></p><p>This is, on balance, probably slightly better than their movement situation in 10th, where they still had to make an initial appearance from reserves on turn 2, but were then locked-in to making at least a 20” move straight ahead from that position, often ending up somewhere awkward. They could fly off the board, but then you’d lose a whole turn of shooting with them!</p><p>Aircraft also cannot ever make a Charge Move.
+</p><h2><span style="font-weight: 400;">Shooting with Aircraft</span></h2>
+<small class="aligncenter"><img class="size-full wp-image-107050" src="../assets/img/news/40k-11th-edition-rules-deep-dive-special-unit-types-5.jpg" alt="Photo of Biel-tan Crimson Hunter"> Photo Credit: Musterkrux</small><br><br><span style="font-weight: 400;">Aircraft ignore the Plunging Fire rule in both directions, but otherwise shoot normally. This is a notable change from 10th Edition - Aircraft used to ignore the Obscuring rule both when shooting or being shot at. This change generally makes aircraft a bit less appealing, especially as unless they have Deep Strike, they will always be deploying around the edges of the board, which will give them restricted sight lines on many maps. Bluntly, Aircraft just aren’t very </span><i><span style="font-weight: 400;">good</span></i><span style="font-weight: 400;"> in 10th Edition, and the times they showed up were usually as tech pieces on specific terrain packs (e.g. UKTC) where being able to shoot into specific staging spots through terrain was high value. Without that, they’ll need to be pretty cheap to be worth taking.</span>
+<h2><span style="font-weight: 400;">Interacting with Aircraft</span></h2>
+<span style="font-weight: 400;">Because an Aircraft’s position on the battlefield is a fairly abstract representation of the plane zipping past, they have limited battlefield impact on units without FLY. Enemy models can always move through Aircraft, and enemy models without FLY can largely ignore them for the purposes of rules that require picking and moving towards nearby enemy units (e.g. Surge Moves). Aircraft do still have an Engagement Range that models cannot normally end moves within.<p></p><p>Only models with FLY can interact with Aircraft in the Charge/Fight Phases as well. Only Units with FLY can select Aircraft as Charge Targets, and only they can make melee attacks at Aircraft.</p><p>This does plausibly create some slightly weird interactions against non-FLY units, as the Engagement Range around an Aircraft can be huge, and potentially impact on nearby enemies being able to successfully charge targets sheltering near them. This probably only ever arises for Aircraft that can Deep Strike, as they’re the only ones that will end up in places where precision melee placement will really matter, but I suspect at some point the restrictions here will change to let non-FLY units end a Charge Move within engagement of an Aircraft, even if they didn’t select it as a Charge Target.
+</p><h1><span style="font-weight: 400;">Wrap Up</span></h1>
+<span style="font-weight: 400;">That’s it for special Unit types. If you want to read more about the rules, go check out our other deep dives from the links up top, or if you’re interested in models, missions or our overall opinions on 11th Edition, head back to the site’s front page, and you’ll find it all there.<p></p><br><i><span style="font-weight: 400;">Have any questions or feedback? Drop us a note in the comments below or email us at contact@tabletopbattles.com. Want articles like this linked in your inbox every Monday morning? Sign up for</span></i><a href="https://www.tabletopbattles.com/newsletter"> <b><i>our newsletter</i></b></a><i><span style="font-weight: 400;">. And don’t forget that you can</span></i><a href="https://www.patreon.com/goonhammer"> <b><i>support us on Patreon</i></b></a><i><span style="font-weight: 400;"> for backer rewards like early video content, Administratum access, an ad-free experience on our website and more.</span></i><span style="font-weight: 400;">&nbsp;</span></span></span></span></span></span></span></span></span>
+							<div class="spacer"></div>
+							<p class="text-small"><em>Originally published on <a href="https://www.goonhammer.com/11th-edition-40k-rules-deep-dive-special-unit-types/" target="_blank" rel="noopener noreferrer">Goonhammer</a>.</em></p>
+						</div>
+					</article>
+					<!-- Post / End -->
+					
+					<div class="ds-comments" id="user-comments">
+						<h4 class="ds-comments__title">Leave a Comment</h4>
+						<script src="https://giscus.app/client.js"
+							data-repo="IShadowedI/Website"
+							data-repo-id="R_kgDOSA7yEg"
+							data-category="Comments"
+							data-category-id="DIC_kwDOSA7yEs4C6yFb"
+							data-mapping="pathname"
+							data-strict="0"
+							data-reactions-enabled="1"
+							data-emit-metadata="0"
+							data-input-position="bottom"
+							data-theme="preferred_color_scheme"
+							data-lang="en"
+							data-loading="lazy"
+							crossorigin="anonymous"
+							async>
+						</script>
+					</div>
+					<div class="ds-comments" id="user-comments">
+						<h4 class="ds-comments__title">Leave a Comment</h4>
+						<script src="https://giscus.app/client.js"
+							data-repo="IShadowedI/Website"
+							data-repo-id=""
+							data-category="Article Comments"
+							data-category-id=""
+							data-mapping="pathname"
+							data-strict="0"
+							data-reactions-enabled="1"
+							data-emit-metadata="0"
+							data-input-position="top"
+							data-theme="dark_dimmed"
+							data-lang="en"
+							data-loading="lazy"
+							crossorigin="anonymous"
+							async>
+						</script>
+					</div>
+				</div>
+			</div>
+		
+<!-- Ad: Multiplex Horizontal -->
+<div class="ds-ad-unit ds-ad-unit--multiplex">
+  <ins class="adsbygoogle" style="display:block"
+    data-ad-format="autorelaxed"
+    data-ad-client="ca-pub-5492466041818466" data-ad-slot="4177776122"></ins>
+  <script>(adsbygoogle = window.adsbygoogle || []).push({});</script>
+</div>
+		</main>
+		
+
+		<!-- Overlay -->
+		<div class="site-overlay"></div>
+		<!-- Overlay / End -->
+
+		<!-- Cart Panel -->
+		<div class="cart-panel">
+			<h4 class="cart-panel__title text-white">Shopping Cart (<span class="cart-panel__items-count">0</span>)</h4>
+			<div class="cart-panel__content">
+				<div class="table-responsive">
+					<table class="table shop-table">
+						<thead>
+							<tr>
+								<th class="product__info">Product</th>
+								<th class="product__quantity">Quantity</th>
+								<th class="product__total">Total</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td colspan="4" class="text-center" style="padding: 30px 0; color: #6c757d; border: none;">
+									<p style="margin: 0; font-size: 14px;">Your cart is empty.</p>
+									<a href="../shop.html" class="btn btn-primary btn-sm" style="margin-top: 10px;">Browse the Shop</a>
+								</td>
+							</tr>
+						</tbody>
+					</table>
+				</div>
+				<div class="cart-panel__totals">
+					<div class="table-responsive">
+						<table class="table">
+							<tfoot>
+								<tr class="cart-panel__subtotal">
+									<th>Cart Subtotal</th>
+									<td>
+										<span class="amount"><span class="amount-currency">$</span>0.00</span>
+									</td>
+								</tr>
+								<tr class="cart-panel__order-total">
+									<th>Cart Total</th>
+									<td><span class="amount"><span class="amount-currency">$</span>0.00</span></td>
+								</tr>
+								</tfoot>
+						</table>
+						<a href="../shop.html" class="btn btn-primary">Browse the Shop</a>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Cart Panel / End -->
+		<!-- Search Panel -->
+		<div class="search-panel">
+			<div class="search-panel__content">
+				<form action="#" id="header-search-form" class="search-form search-form--header">
+					<input type="text" class="form-control" value="" placeholder="What are you looking for...?">
+				</form>
+				<span>Write what you are looking for, choose the filters and press enter to begin your search!</span>
+			</div>
+		</div>
+		<!-- Search Panel / End -->
+		<!-- Menu Panel -->
+		<div class="menu-panel">
+			<ul class="menu-panel__mobile-bar list-unstyled d-md-none">
+				<li class="mobile-bar-item">
+					<a class="mobile-bar-item__header collapsed" data-toggle="collapse" href="#mobile_collapse_1" role="button" aria-expanded="false" aria-controls="mobile_collapse_1">
+						Main Links
+						<span class="main-nav__toggle">&nbsp;</span>
+					</a>
+					<div id="mobile_collapse_1" class="collapse mobile-bar-item__body">
+						<!-- Mobile Navigation -->
+						<nav class="mobile-nav">
+							<ul class="mobile-nav__list">
+<li>
+									<a href="../home.html">Home</a>
+								</li>
+								<li>
+									<a href="../news.html">News</a>
+								</li>
+								<li>
+									<a href="../shop.html">Shop</a>
+								</li>
+								<li>
+									<a href="#">Project Pages</a>
+									<ul class="mobile-nav__sub">
+										<li><a href="../dragon.html">Dragon Social</a></li>
+										<li><a href="../little-grotto.html">Little Grotto</a></li>
+										<li><a href="../shadow-coin.html">Shadow Coin</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Creative Projects</a>
+									<ul class="mobile-nav__sub">
+										<li><a href="../midnight-coup.html">Midnight Coup</a></li>
+										<li><a href="../all-the-animals.html">All the Animals</a></li>
+										<li><a href="../obsidian-templates.html">Obsidian Templates</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Tools and Utilities</a>
+									<ul class="mobile-nav__sub">
+										<li><a href="../tools.html">Tool Suite</a></li>
+										<li><a href="#">Utilities</a></li>
+										<li><a href="../plugins.html">Plugins</a></li>
+										<li><a href="#">Mods</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Community</a>
+									<ul class="mobile-nav__sub">
+										<li><a href="#">Browse Community Creations</a></li>
+										<li><a href="../plugins-submit.html">Submit a Plugin</a></li>
+										<li><a href="#">Submit a Mod</a></li>
+										<li><a href="#">Creation Docs</a></li>
+									</ul>
+								</li>
+								<li>
+									<a href="#">Details</a>
+									<ul class="mobile-nav__sub">
+										<li><a href="../about.html">About</a></li>
+										<li><a href="#">Apply</a></li>
+										<li><a href="../contact.html">Contact</a></li>
+										<li><a href="../login-register.html">Account</a></li>
+									</ul>
+								</li>
+							</ul>
+									</nav>
+									<!-- Mobile Navigation / End -->
+					</div>
+				</li>
+				<li class="mobile-bar-item">
+					<a class="mobile-bar-item__header collapsed" data-toggle="collapse" href="#mobile_collapse_2" role="button" aria-expanded="false" aria-controls="mobile_collapse_2">
+						Social Links
+						<span class="main-nav__toggle">&nbsp;</span>
+					</a>
+					<div id="mobile_collapse_2" class="collapse mobile-bar-item__body">
+						<ul class="social-menu social-menu--mobile-bar">
+							<li><a href="https://www.youtube.com/channel/UC6cBaDPwZoDH5oTpnMd3CRw" target="_blank" rel="noopener" data-social="youtube"><span>YouTube</span></a></li>
+							<li><a href="https://www.twitch.tv/lshadowedl" target="_blank" rel="noopener" data-social="twitch"><span>Twitch</span></a></li>
+							<li><a href="https://github.com/IShadowedI" target="_blank" rel="noopener" data-social="github"><span>GitHub</span></a></li>
+							<li><a href="https://bsky.app/profile/ishadowedi.bsky.social" target="_blank" rel="noopener" data-social="bluesky"><span>Bluesky</span></a></li>
+							<li><a href="https://www.tiktok.com/@ishadowedi" target="_blank" rel="noopener" data-social="tiktok"><span>TikTok</span></a></li>
+							<li><a href="https://www.curseforge.com/members/lshadowedl/projects" target="_blank" rel="noopener" data-social="curseforge"><span>CurseForge</span></a></li>
+						</ul>
+					</div>
+				</li>
+				<li class="mobile-bar-item mobile-bar-item--info">
+					<a class="mobile-bar-item__header collapsed" data-toggle="collapse" href="#mobile_collapse_3" role="button" aria-expanded="false" aria-controls="mobile_collapse_3">
+						Get in Touch!
+						<span class="main-nav__toggle">&nbsp;</span>
+					</a>
+					<div id="mobile_collapse_3" class="collapse mobile-bar-item__body">
+						<div class="mobile-bar-item__inner">
+							<ul class="list-unstyled">
+								<li class="info-box">
+									<div class="info-box__label">Socials Hub</div>
+									<div class="info-box__content"><a href="https://shadoweds.carrd.co/" target="_blank" rel="noopener">shadoweds.carrd.co</a></div>
+								</li>
+								<li class="info-box">
+									<div class="info-box__label">General inquiries</div>
+									<div class="info-box__content"><a href="mailto:inquiries@dragonsshadow.com">inquiries<span class="color-primary">@</span>dragonsshadow.com</a></div>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="mobile-bar-item mobile-bar-item--partners">
+					<a id="mobile_collapse_4h" class="mobile-bar-item__header collapsed" data-toggle="collapse" href="#mobile_collapse_4" role="button" aria-expanded="false" aria-controls="mobile_collapse_4">
+						Our Partners
+						<span class="main-nav__toggle">&nbsp;</span>
+					</a>
+					<div id="mobile_collapse_4" class="collapse mobile-bar-item__body">
+						<div class="mobile-bar-item__inner">
+							<ul class="widget-partners-mobile-carousel">
+								<li>
+									<img src="../assets/img/samples/partner-carousel-img-01.png" alt="">
+								</li>
+								<li>
+									<img src="../assets/img/samples/partner-carousel-img-02.png" alt="">
+								</li>
+								<li>
+									<img src="../assets/img/samples/partner-carousel-img-03.png" alt="">
+								</li>
+							</ul>
+						</div>
+					</div>
+				</li>
+				<li class="mobile-bar-item">
+					<a class="mobile-bar-item__header" href="../shop-account-settings.html">
+						Account Settings
+					</a>
+				</li>
+				<li class="mobile-bar-item">
+					<a class="mobile-bar-item__header" href="../login-register.html">
+						Logout
+					</a>
+				</li>
+			</ul>
+			<div class="menu-panel__top-bar">
+				<div class="top-bar-filter">
+					<label class="top-bar-filter__label">Competitions</label>
+					<select class="cs-select">
+						<option value="all" selected>All Competitions</option>
+						<option value="x2018">Xenowatch 2018 Tournament</option>
+						<option value="xwleague">Xenowatch West League</option>
+						<option value="xeleague">Xenowatch East League</option>
+						<option value="xusacup">Xenowatch USA Cup</option>
+					</select>
+				</div>
+				<ul class="top-bar-carousel">
+					<li class="top-bar-carousel__headline x2018">
+						<span>Xenowatch 2018 Tournament</span>
+					</li>
+					<li class="top-bar-carousel__item x2018">
+						<div class="match-score-inline">
+							<div class="match-score-inline__body">
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-1" role="group">
+											<img src="../assets/img/samples/logo-necromancers-30.png" srcset="../assets/img/samples/logo-necromancers-30@2x.png 2x" alt="NCR Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">NCR</div>
+												<div class="match-team__country ">USA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result match-result--winner-right">
+										<span class="match-result__score">2</span>
+									</div>
+									<div class="match-result match-result--live">
+										<span class="match-result__label">25:42</span>
+									</div>
+								</div>
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-2" role="group">
+											<img src="../assets/img/samples/logo-rhinos-30.png" srcset="../assets/img/samples/logo-rhinos-30@2x.png 2x" alt="RRH Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">RRH</div>
+												<div class="match-team__country ">JPN</div>
+										</figcaption>
+									</figure>
+									<div class="match-result">
+										<span class="match-result__score">1</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">01/12</span>
+									</div>
+								</div>
+							</div>
+							<div class="match-score-inline__footer">
+								<ul class="match-stats-links">
+									<li>
+										<a href="../matches-overview-1.html">
+											<svg role="img" class="df-icon df-icon--overview">
+												<use xlink:href="../assets/img/necromancers.svg#overview"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-stats-1.html">
+											<svg role="img" class="df-icon df-icon--stats">
+												<use xlink:href="../assets/img/necromancers.svg#stats"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-lineups-1.html">
+											<svg role="img" class="df-icon df-icon--lineups">
+												<use xlink:href="../assets/img/necromancers.svg#lineups"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-replay.html">
+											<svg role="img" class="df-icon df-icon--replay">
+												<use xlink:href="../assets/img/necromancers.svg#replay"/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="top-bar-carousel__item x2018">
+						<div class="match-score-inline">
+							<div class="match-score-inline__body">
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-5" role="group">
+											<img src="../assets/img/samples/logo-eagles-30.png" srcset="../assets/img/samples/logo-eagles-30@2x.png 2x" alt="FEG Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">FEG</div>
+												<div class="match-team__country ">FRA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result match-result--winner-right">
+										<span class="match-result__score">4</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">Final</span>
+									</div>
+								</div>
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-1" role="group">
+											<img src="../assets/img/samples/logo-necromancers-30.png" srcset="../assets/img/samples/logo-necromancers-30@2x.png 2x" alt="NCR Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">NCR</div>
+												<div class="match-team__country ">USA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result">
+										<span class="match-result__score">3</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">01/09</span>
+									</div>
+								</div>
+							</div>
+							<div class="match-score-inline__footer">
+								<ul class="match-stats-links">
+									<li>
+										<a href="../matches-overview-1.html">
+											<svg role="img" class="df-icon df-icon--overview">
+												<use xlink:href="../assets/img/necromancers.svg#overview"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-stats-1.html">
+											<svg role="img" class="df-icon df-icon--stats">
+												<use xlink:href="../assets/img/necromancers.svg#stats"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-lineups-1.html">
+											<svg role="img" class="df-icon df-icon--lineups">
+												<use xlink:href="../assets/img/necromancers.svg#lineups"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-replay.html">
+											<svg role="img" class="df-icon df-icon--replay">
+												<use xlink:href="../assets/img/necromancers.svg#replay"/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="top-bar-carousel__item x2018">
+						<div class="match-score-inline">
+							<div class="match-score-inline__body">
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-1" role="group">
+											<img src="../assets/img/samples/logo-necromancers-30.png" srcset="../assets/img/samples/logo-necromancers-30@2x.png 2x" alt="NCR Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">NCR</div>
+												<div class="match-team__country ">USA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result">
+										<span class="match-result__score">1</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">Final</span>
+									</div>
+								</div>
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-3" role="group">
+											<img src="../assets/img/samples/logo-bulls-30.png" srcset="../assets/img/samples/logo-bulls-30@2x.png 2x" alt="AGB Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">AGB</div>
+												<div class="match-team__country ">SPA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result match-result--winner-right">
+										<span class="match-result__score">3</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">01/05</span>
+									</div>
+								</div>
+							</div>
+							<div class="match-score-inline__footer">
+								<ul class="match-stats-links">
+									<li>
+										<a href="../matches-overview-1.html">
+											<svg role="img" class="df-icon df-icon--overview">
+												<use xlink:href="../assets/img/necromancers.svg#overview"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-stats-1.html">
+											<svg role="img" class="df-icon df-icon--stats">
+												<use xlink:href="../assets/img/necromancers.svg#stats"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-lineups-1.html">
+											<svg role="img" class="df-icon df-icon--lineups">
+												<use xlink:href="../assets/img/necromancers.svg#lineups"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-replay.html">
+											<svg role="img" class="df-icon df-icon--replay">
+												<use xlink:href="../assets/img/necromancers.svg#replay"/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="top-bar-carousel__item x2018">
+						<div class="match-score-inline">
+							<div class="match-score-inline__body">
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-4" role="group">
+											<img src="../assets/img/samples/logo-panthers-30.png" srcset="../assets/img/samples/logo-panthers-30@2x.png 2x" alt="ICP Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">ICP</div>
+												<div class="match-team__country ">POR</div>
+										</figcaption>
+									</figure>
+									<div class="match-result">
+										<span class="match-result__score">0</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">Final</span>
+									</div>
+								</div>
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-1" role="group">
+											<img src="../assets/img/samples/logo-necromancers-30.png" srcset="../assets/img/samples/logo-necromancers-30@2x.png 2x" alt="NCR Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">NCR</div>
+												<div class="match-team__country ">USA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result match-result--winner-right">
+										<span class="match-result__score">5</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">01/02</span>
+									</div>
+								</div>
+							</div>
+							<div class="match-score-inline__footer">
+								<ul class="match-stats-links">
+									<li>
+										<a href="../matches-overview-1.html">
+											<svg role="img" class="df-icon df-icon--overview">
+												<use xlink:href="../assets/img/necromancers.svg#overview"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-stats-1.html">
+											<svg role="img" class="df-icon df-icon--stats">
+												<use xlink:href="../assets/img/necromancers.svg#stats"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-lineups-1.html">
+											<svg role="img" class="df-icon df-icon--lineups">
+												<use xlink:href="../assets/img/necromancers.svg#lineups"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-replay.html">
+											<svg role="img" class="df-icon df-icon--replay">
+												<use xlink:href="../assets/img/necromancers.svg#replay"/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+		
+		
+					<li class="top-bar-carousel__headline xwleague">
+						<span>Xenowatch West League</span>
+					</li>
+					<li class="top-bar-carousel__item xwleague">
+						<div class="match-score-inline">
+							<div class="match-score-inline__body">
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-1" role="group">
+											<img src="../assets/img/samples/logo-necromancers-30.png" srcset="../assets/img/samples/logo-necromancers-30@2x.png 2x" alt="NCR Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">NCR</div>
+												<div class="match-team__country ">USA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result match-result--winner-right">
+										<span class="match-result__score">1</span>
+									</div>
+									<div class="match-result match-result--live">
+										<span class="match-result__label">12:33</span>
+									</div>
+								</div>
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-2" role="group">
+											<img src="../assets/img/samples/logo-rhinos-30.png" srcset="../assets/img/samples/logo-rhinos-30@2x.png 2x" alt="RRH Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">RRH</div>
+												<div class="match-team__country ">JPN</div>
+										</figcaption>
+									</figure>
+									<div class="match-result">
+										<span class="match-result__score">0</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">01/12</span>
+									</div>
+								</div>
+							</div>
+							<div class="match-score-inline__footer">
+								<ul class="match-stats-links">
+									<li>
+										<a href="../matches-overview-1.html">
+											<svg role="img" class="df-icon df-icon--overview">
+												<use xlink:href="../assets/img/necromancers.svg#overview"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-stats-1.html">
+											<svg role="img" class="df-icon df-icon--stats">
+												<use xlink:href="../assets/img/necromancers.svg#stats"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-lineups-1.html">
+											<svg role="img" class="df-icon df-icon--lineups">
+												<use xlink:href="../assets/img/necromancers.svg#lineups"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-replay.html">
+											<svg role="img" class="df-icon df-icon--replay">
+												<use xlink:href="../assets/img/necromancers.svg#replay"/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="top-bar-carousel__item xwleague">
+						<div class="match-score-inline">
+							<div class="match-score-inline__body">
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-4" role="group">
+											<img src="../assets/img/samples/logo-panthers-30.png" srcset="../assets/img/samples/logo-panthers-30@2x.png 2x" alt="ICP Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">ICP</div>
+												<div class="match-team__country ">POR</div>
+										</figcaption>
+									</figure>
+									<div class="match-result">
+										<span class="match-result__score">0</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">Final</span>
+									</div>
+								</div>
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-1" role="group">
+											<img src="../assets/img/samples/logo-necromancers-30.png" srcset="../assets/img/samples/logo-necromancers-30@2x.png 2x" alt="NCR Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">NCR</div>
+												<div class="match-team__country ">USA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result match-result--winner-right">
+										<span class="match-result__score">3</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">01/07</span>
+									</div>
+								</div>
+							</div>
+							<div class="match-score-inline__footer">
+								<ul class="match-stats-links">
+									<li>
+										<a href="../matches-overview-1.html">
+											<svg role="img" class="df-icon df-icon--overview">
+												<use xlink:href="../assets/img/necromancers.svg#overview"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-stats-1.html">
+											<svg role="img" class="df-icon df-icon--stats">
+												<use xlink:href="../assets/img/necromancers.svg#stats"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-lineups-1.html">
+											<svg role="img" class="df-icon df-icon--lineups">
+												<use xlink:href="../assets/img/necromancers.svg#lineups"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-replay.html">
+											<svg role="img" class="df-icon df-icon--replay">
+												<use xlink:href="../assets/img/necromancers.svg#replay"/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="top-bar-carousel__item xwleague">
+						<div class="match-score-inline">
+							<div class="match-score-inline__body">
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-5" role="group">
+											<img src="../assets/img/samples/logo-eagles-30.png" srcset="../assets/img/samples/logo-eagles-30@2x.png 2x" alt="FEG Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">FEG</div>
+												<div class="match-team__country ">FRA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result match-result--winner-right">
+										<span class="match-result__score">5</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">Final</span>
+									</div>
+								</div>
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-1" role="group">
+											<img src="../assets/img/samples/logo-necromancers-30.png" srcset="../assets/img/samples/logo-necromancers-30@2x.png 2x" alt="NCR Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">NCR</div>
+												<div class="match-team__country ">USA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result">
+										<span class="match-result__score">2</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">01/04</span>
+									</div>
+								</div>
+							</div>
+							<div class="match-score-inline__footer">
+								<ul class="match-stats-links">
+									<li>
+										<a href="../matches-overview-1.html">
+											<svg role="img" class="df-icon df-icon--overview">
+												<use xlink:href="../assets/img/necromancers.svg#overview"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-stats-1.html">
+											<svg role="img" class="df-icon df-icon--stats">
+												<use xlink:href="../assets/img/necromancers.svg#stats"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-lineups-1.html">
+											<svg role="img" class="df-icon df-icon--lineups">
+												<use xlink:href="../assets/img/necromancers.svg#lineups"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-replay.html">
+											<svg role="img" class="df-icon df-icon--replay">
+												<use xlink:href="../assets/img/necromancers.svg#replay"/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="top-bar-carousel__item xwleague">
+						<div class="match-score-inline">
+							<div class="match-score-inline__body">
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-1" role="group">
+											<img src="../assets/img/samples/logo-necromancers-30.png" srcset="../assets/img/samples/logo-necromancers-30@2x.png 2x" alt="NCR Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">NCR</div>
+												<div class="match-team__country ">USA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result">
+										<span class="match-result__score">1</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">Final</span>
+									</div>
+								</div>
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-3" role="group">
+											<img src="../assets/img/samples/logo-bulls-30.png" srcset="../assets/img/samples/logo-bulls-30@2x.png 2x" alt="AGB Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">AGB</div>
+												<div class="match-team__country ">SPA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result match-result--winner-right">
+										<span class="match-result__score">3</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">01/03</span>
+									</div>
+								</div>
+							</div>
+							<div class="match-score-inline__footer">
+								<ul class="match-stats-links">
+									<li>
+										<a href="../matches-overview-1.html">
+											<svg role="img" class="df-icon df-icon--overview">
+												<use xlink:href="../assets/img/necromancers.svg#overview"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-stats-1.html">
+											<svg role="img" class="df-icon df-icon--stats">
+												<use xlink:href="../assets/img/necromancers.svg#stats"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-lineups-1.html">
+											<svg role="img" class="df-icon df-icon--lineups">
+												<use xlink:href="../assets/img/necromancers.svg#lineups"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-replay.html">
+											<svg role="img" class="df-icon df-icon--replay">
+												<use xlink:href="../assets/img/necromancers.svg#replay"/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+		
+		
+					<li class="top-bar-carousel__headline xeleague">
+						<span>Xenowatch East League</span>
+					</li>
+					<li class="top-bar-carousel__item xeleague">
+						<div class="match-score-inline">
+							<div class="match-score-inline__body">
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-1" role="group">
+											<img src="../assets/img/samples/logo-necromancers-30.png" srcset="../assets/img/samples/logo-necromancers-30@2x.png 2x" alt="NCR Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">NCR</div>
+												<div class="match-team__country ">USA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result match-result--winner-right">
+										<span class="match-result__score">4</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">Final</span>
+									</div>
+								</div>
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-2" role="group">
+											<img src="../assets/img/samples/logo-rhinos-30.png" srcset="../assets/img/samples/logo-rhinos-30@2x.png 2x" alt="RRH Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">RRH</div>
+												<div class="match-team__country ">JPN</div>
+										</figcaption>
+									</figure>
+									<div class="match-result">
+										<span class="match-result__score">1</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">12/18</span>
+									</div>
+								</div>
+							</div>
+							<div class="match-score-inline__footer">
+								<ul class="match-stats-links">
+									<li>
+										<a href="../matches-overview-1.html">
+											<svg role="img" class="df-icon df-icon--overview">
+												<use xlink:href="../assets/img/necromancers.svg#overview"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-stats-1.html">
+											<svg role="img" class="df-icon df-icon--stats">
+												<use xlink:href="../assets/img/necromancers.svg#stats"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-lineups-1.html">
+											<svg role="img" class="df-icon df-icon--lineups">
+												<use xlink:href="../assets/img/necromancers.svg#lineups"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-replay.html">
+											<svg role="img" class="df-icon df-icon--replay">
+												<use xlink:href="../assets/img/necromancers.svg#replay"/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="top-bar-carousel__item xeleague">
+						<div class="match-score-inline">
+							<div class="match-score-inline__body">
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-1" role="group">
+											<img src="../assets/img/samples/logo-necromancers-30.png" srcset="../assets/img/samples/logo-necromancers-30@2x.png 2x" alt="NCR Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">NCR</div>
+												<div class="match-team__country ">USA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result match-result--winner-right">
+										<span class="match-result__score">4</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">Final</span>
+									</div>
+								</div>
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-3" role="group">
+											<img src="../assets/img/samples/logo-bulls-30.png" srcset="../assets/img/samples/logo-bulls-30@2x.png 2x" alt="AGB Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">AGB</div>
+												<div class="match-team__country ">SPA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result">
+										<span class="match-result__score">3</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">12/11</span>
+									</div>
+								</div>
+							</div>
+							<div class="match-score-inline__footer">
+								<ul class="match-stats-links">
+									<li>
+										<a href="../matches-overview-1.html">
+											<svg role="img" class="df-icon df-icon--overview">
+												<use xlink:href="../assets/img/necromancers.svg#overview"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-stats-1.html">
+											<svg role="img" class="df-icon df-icon--stats">
+												<use xlink:href="../assets/img/necromancers.svg#stats"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-lineups-1.html">
+											<svg role="img" class="df-icon df-icon--lineups">
+												<use xlink:href="../assets/img/necromancers.svg#lineups"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-replay.html">
+											<svg role="img" class="df-icon df-icon--replay">
+												<use xlink:href="../assets/img/necromancers.svg#replay"/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="top-bar-carousel__item xeleague">
+						<div class="match-score-inline">
+							<div class="match-score-inline__body">
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-4" role="group">
+											<img src="../assets/img/samples/logo-panthers-30.png" srcset="../assets/img/samples/logo-panthers-30@2x.png 2x" alt="ICP Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">ICP</div>
+												<div class="match-team__country ">POR</div>
+										</figcaption>
+									</figure>
+									<div class="match-result">
+										<span class="match-result__score">0</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">Final</span>
+									</div>
+								</div>
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-1" role="group">
+											<img src="../assets/img/samples/logo-necromancers-30.png" srcset="../assets/img/samples/logo-necromancers-30@2x.png 2x" alt="NCR Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">NCR</div>
+												<div class="match-team__country ">USA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result match-result--winner-right">
+										<span class="match-result__score">2</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">12/09</span>
+									</div>
+								</div>
+							</div>
+							<div class="match-score-inline__footer">
+								<ul class="match-stats-links">
+									<li>
+										<a href="../matches-overview-1.html">
+											<svg role="img" class="df-icon df-icon--overview">
+												<use xlink:href="../assets/img/necromancers.svg#overview"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-stats-1.html">
+											<svg role="img" class="df-icon df-icon--stats">
+												<use xlink:href="../assets/img/necromancers.svg#stats"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-lineups-1.html">
+											<svg role="img" class="df-icon df-icon--lineups">
+												<use xlink:href="../assets/img/necromancers.svg#lineups"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-replay.html">
+											<svg role="img" class="df-icon df-icon--replay">
+												<use xlink:href="../assets/img/necromancers.svg#replay"/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+		
+		
+					<li class="top-bar-carousel__headline xusacup">
+						<span>Xenowatch USA Cup</span>
+					</li>
+					<li class="top-bar-carousel__item xusacup">
+						<div class="match-score-inline">
+							<div class="match-score-inline__body">
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-1" role="group">
+											<img src="../assets/img/samples/logo-necromancers-30.png" srcset="../assets/img/samples/logo-necromancers-30@2x.png 2x" alt="NCR Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">NCR</div>
+												<div class="match-team__country ">USA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result">
+										<span class="match-result__score">1</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">Final</span>
+									</div>
+								</div>
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-3" role="group">
+											<img src="../assets/img/samples/logo-bulls-30.png" srcset="../assets/img/samples/logo-bulls-30@2x.png 2x" alt="AGB Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">AGB</div>
+												<div class="match-team__country ">SPA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result match-result--winner-right">
+										<span class="match-result__score">3</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">11/17</span>
+									</div>
+								</div>
+							</div>
+							<div class="match-score-inline__footer">
+								<ul class="match-stats-links">
+									<li>
+										<a href="../matches-overview-1.html">
+											<svg role="img" class="df-icon df-icon--overview">
+												<use xlink:href="../assets/img/necromancers.svg#overview"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-stats-1.html">
+											<svg role="img" class="df-icon df-icon--stats">
+												<use xlink:href="../assets/img/necromancers.svg#stats"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-lineups-1.html">
+											<svg role="img" class="df-icon df-icon--lineups">
+												<use xlink:href="../assets/img/necromancers.svg#lineups"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-replay.html">
+											<svg role="img" class="df-icon df-icon--replay">
+												<use xlink:href="../assets/img/necromancers.svg#replay"/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="top-bar-carousel__item xusacup">
+						<div class="match-score-inline">
+							<div class="match-score-inline__body">
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-5" role="group">
+											<img src="../assets/img/samples/logo-eagles-30.png" srcset="../assets/img/samples/logo-eagles-30@2x.png 2x" alt="FEG Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">FEG</div>
+												<div class="match-team__country ">FRA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result match-result--winner-right">
+										<span class="match-result__score">2</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">Final</span>
+									</div>
+								</div>
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-1" role="group">
+											<img src="../assets/img/samples/logo-necromancers-30.png" srcset="../assets/img/samples/logo-necromancers-30@2x.png 2x" alt="NCR Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">NCR</div>
+												<div class="match-team__country ">USA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result">
+										<span class="match-result__score">1</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">11/11</span>
+									</div>
+								</div>
+							</div>
+							<div class="match-score-inline__footer">
+								<ul class="match-stats-links">
+									<li>
+										<a href="../matches-overview-1.html">
+											<svg role="img" class="df-icon df-icon--overview">
+												<use xlink:href="../assets/img/necromancers.svg#overview"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-stats-1.html">
+											<svg role="img" class="df-icon df-icon--stats">
+												<use xlink:href="../assets/img/necromancers.svg#stats"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-lineups-1.html">
+											<svg role="img" class="df-icon df-icon--lineups">
+												<use xlink:href="../assets/img/necromancers.svg#lineups"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-replay.html">
+											<svg role="img" class="df-icon df-icon--replay">
+												<use xlink:href="../assets/img/necromancers.svg#replay"/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+					<li class="top-bar-carousel__item xusacup">
+						<div class="match-score-inline">
+							<div class="match-score-inline__body">
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-4" role="group">
+											<img src="../assets/img/samples/logo-panthers-30.png" srcset="../assets/img/samples/logo-panthers-30@2x.png 2x" alt="ICP Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">ICP</div>
+												<div class="match-team__country ">POR</div>
+										</figcaption>
+									</figure>
+									<div class="match-result match-result--winner-right">
+										<span class="match-result__score">3</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">Final</span>
+									</div>
+								</div>
+								<div class="match-score-inline__body-inner">
+									<figure class="match-team" role="group">
+										<figure class="match-team-logo match-team-logo--team-1" role="group">
+											<img src="../assets/img/samples/logo-necromancers-30.png" srcset="../assets/img/samples/logo-necromancers-30@2x.png 2x" alt="NCR Logo">
+										</figure>
+										<figcaption>
+											<div class="match-team__name">NCR</div>
+												<div class="match-team__country ">USA</div>
+										</figcaption>
+									</figure>
+									<div class="match-result">
+										<span class="match-result__score">2</span>
+									</div>
+									<div class="match-result">
+										<span class="match-result__label">11/06</span>
+									</div>
+								</div>
+							</div>
+							<div class="match-score-inline__footer">
+								<ul class="match-stats-links">
+									<li>
+										<a href="../matches-overview-1.html">
+											<svg role="img" class="df-icon df-icon--overview">
+												<use xlink:href="../assets/img/necromancers.svg#overview"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-stats-1.html">
+											<svg role="img" class="df-icon df-icon--stats">
+												<use xlink:href="../assets/img/necromancers.svg#stats"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-lineups-1.html">
+											<svg role="img" class="df-icon df-icon--lineups">
+												<use xlink:href="../assets/img/necromancers.svg#lineups"/>
+											</svg>
+										</a>
+									</li>
+									<li>
+										<a href="../matches-replay.html">
+											<svg role="img" class="df-icon df-icon--replay">
+												<use xlink:href="../assets/img/necromancers.svg#replay"/>
+											</svg>
+										</a>
+									</li>
+								</ul>
+							</div>
+						</div>
+					</li>
+				</ul>
+			</div>
+			<div class="menu-panel__content d-none d-md-flex">
+				<div class="menu-panel__navigation">
+					<div id="dl-menu" class="dl-menuwrapper">
+						<!-- <button class="dl-trigger">Open Menu</button> -->
+						<ul class="dl-menu dl-menuopen">
+							<li class="">
+								<a href="../home.html">Home</a>
+							</li>
+							<li class="">
+								<a href="../team-selection-2.html">Teams</a>
+								<ul class="dl-submenu">
+									<li class="">
+										<a href="#">Our Roster</a>
+										<ul class="dl-submenu">
+											<li class=""><a href="../team-selection-1.html">Roster Grid</a></li>
+											<li class=""><a href="../team-selection-2.html">Roster Cards</a></li>
+											<li class=""><a href="../team-selection-3.html">Roster List</a></li>
+											<li class=""><a href="../team-selection-4.html">Roster Compact</a></li>
+										</ul>
+									</li>
+									<li class="">
+										<a href="../team-overview.html">Team Overview</a>
+										<ul class="dl-submenu">
+											<li class=""><a href="../team-overview.html">Team Profile</a></li>
+											<li class=""><a href="../team-overview-2.html">Team Stats</a></li>
+										</ul>
+									</li>
+									<li class=""><a href="../team-player-1.html">Player Profile</a></li>
+									<li class=""><a href="../management-and-staff.html">Management & Staff</a></li>
+									<li class=""><a href="../staff-member.html">Staff Member<span class="badge badge-danger">New</span></a></li>
+								</ul>
+							</li>
+							<li class=""><a href="#">Matches</a>
+								<ul class="dl-submenu">
+									<li class=""><a href="../matches-scores.html">Results</a></li>
+									<li class=""><a href="../matches-upcoming.html">Upcoming Matches</a></li>
+									<li class=""><a href="../matches-standings.html">Standings</a></li>
+									<li class=""><a href="#">Match Stats</a>
+										<ul class="dl-submenu">
+											<li class=""><a href="../matches-stats-1.html">Game Stats</a></li>
+											<li class=""><a href="../matches-stats-2.html">Round Stats</a></li>
+											<li class=""><a href="../matches-stats-3.html">Player Stats</a></li>
+										</ul>
+									</li>
+									<li class="">
+										<a href="#">Match Lineups</a>
+										<ul class="dl-submenu">
+											<li class=""><a href="../matches-lineups-1.html">Lineups Grid</a></li>
+											<li class=""><a href="../matches-lineups-2.html">Lineups Detail</a></li>
+											<li class=""><a href="../matches-lineups-3.html">Lineups Compare</a></li>
+										</ul>
+									</li>
+									<li class=""><a href="#">Match Overviews</a>
+										<ul class="dl-submenu">
+											<li class=""><a href="../matches-overview-1.html">Match Summary</a></li>
+											<li class=""><a href="../matches-overview-2.html">Match Detail</a></li>
+										</ul>
+									</li>
+									<li class=""><a href="../matches-replay.html">Match Replay</a></li>
+								</ul>
+							</li>
+							<li class="">
+								<a href="../news.html">News</a>
+							</li>
+							<li>
+								<a href="#">Features</a>
+								<ul class="dl-submenu dl-megamenu">
+									<div class="row">
+										<ul class="col-md-6 col-lg-3">
+											<li><strong>Project Pages</strong></li>
+											<li><a href="../dragon.html">Dragon Social</a></li>
+											<li><a href="../little-grotto.html">Little Grotto</a></li>
+											<li><a href="../shadow-coin.html">Shadow Coin</a></li>
+										</ul>
+										<ul class="col-md-6 col-lg-3">
+											<li><strong>Tools and Utilities</strong></li>
+											<li><a href="../tools.html">Tool Suite</a></li>
+											<li><a href="#">Utilities</a></li>
+											<li><a href="../plugins.html">Plugins</a></li>
+											<li><a href="#">Mods</a></li>
+										</ul>
+										<ul class="col-md-6 col-lg-3">
+											<li><strong>Community</strong></li>
+											<li><a href="#">Browse Community Creations</a></li>
+											<li><a href="../plugins-submit.html">Submit a Plugin</a></li>
+											<li><a href="#">Submit a Mod</a></li>
+											<li><a href="#">Creation Docs</a></li>
+										</ul>
+										<ul class="col-md-6 col-lg-3">
+											<li><strong>Details</strong></li>
+											<li><a href="../about.html">About</a></li>
+											<li><a href="#">Apply</a></li>
+											<li><a href="../contact.html">Contact</a></li>
+											<li><a href="../login-register.html">Account</a></li>
+										</ul>
+									</div>
+								</ul>
+							</li>
+							<li class="">
+								<a href="../shop.html">Shop</a>
+								<ul class="dl-submenu">
+									<li class=""><a href="../shop.html">Merch Store</a></li>
+									<li class=""><a href="../shop-2.html">Shop Grid</a></li>
+									<li class=""><a href="../shop-product.html">Product Details</a></li>
+									<li class=""><a href="../shop-checkout.html">Checkout</a></li>
+								</ul>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="menu-panel__widget-area">
+					<div class="row">
+						<div class="col-md-12 col-lg-6 col-xl-5">
+							<!-- Widget: About Shadow -->
+							<section class="widget widget-text">
+								<h5 class="widget__title">About IShadowedI</h5>
+								<div class="widget__content">
+									<p>
+										Creator, developer, and the mind behind Dragon’s Den. Building tools, games, and communities for tabletop fans and creators alike.
+									</p>
+									<div class="info-box">
+										<div class="info-box__label">Socials Hub</div>
+										<div class="info-box__content"><a href="https://shadoweds.carrd.co/" target="_blank" rel="noopener">shadoweds.carrd.co</a></div>
+									</div>
+									<div class="info-box">
+										<div class="info-box__label">Get in touch</div>
+										<div class="info-box__content"><a href="mailto:inquiries@dragonsshadow.com">inquiries<span class="color-primary">@</span>dragonsshadow.com</a></div>
+									</div>
+								</div>
+							</section>
+							<!-- Widget: About Shadow / End -->
+						</div>
+						<div class="col-md-12 col-lg-6 col-xl-5 offset-xl-2 mt-5 mt-lg-0">
+							<!-- Widget: Shadow's Links -->
+							<section class="widget widget-contact-info">
+								<h5 class="widget__title">Shadow’s Links</h5>
+								<div class="widget__content">
+									<p>
+										Follow IShadowedI across the web — subscribe, watch live, and check out the latest projects.
+									</p>
+									<ul class="social-menu social-menu--default">
+										<li><a href="https://www.youtube.com/channel/UC6cBaDPwZoDH5oTpnMd3CRw" target="_blank" rel="noopener" data-social="youtube"></a></li>
+										<li><a href="https://www.twitch.tv/lshadowedl" target="_blank" rel="noopener" data-social="twitch"></a></li>
+										<li><a href="https://github.com/IShadowedI" target="_blank" rel="noopener" data-social="github"></a></li>
+										<li><a href="https://bsky.app/profile/ishadowedi.bsky.social" target="_blank" rel="noopener" data-social="bluesky"></a></li>
+										<li><a href="https://www.tiktok.com/@ishadowedi" target="_blank" rel="noopener" data-social="tiktok"></a></li>
+										<li><a href="https://www.curseforge.com/members/lshadowedl/projects" target="_blank" rel="noopener" data-social="curseforge"></a></li>
+									</ul>
+								</div>
+							</section>
+							<!-- Widget: Shadow's Links / End -->
+						</div>
+					</div>
+					<div class="row">
+						<div class="col-md-12">
+							<!-- Widget: Partners Carousel -->
+							<section class="widget widget-partners-carousel">
+								<h5 class="widget__title">Sponsors & Partners</h5>
+								<div class="widget__content">
+									<ul>
+										<li>
+											<img src="../assets/img/samples/partner-carousel-img-01.png" alt="">
+										</li>
+										<li>
+											<img src="../assets/img/samples/partner-carousel-img-02.png" alt="">
+										</li>
+										<li>
+											<img src="../assets/img/samples/partner-carousel-img-03.png" alt="">
+										</li>
+										<li>
+											<img src="../assets/img/samples/partner-carousel-img-01.png" alt="">
+										</li>
+										<li>
+											<img src="../assets/img/samples/partner-carousel-img-02.png" alt="">
+										</li>
+										<li>
+											<img src="../assets/img/samples/partner-carousel-img-03.png" alt="">
+										</li>
+									</ul>
+								</div>
+							</section>
+							<!-- Widget: Partners Carousel / End -->
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<!-- Menu Panel / End -->
+
+	</div>
+
+	<div class="preloader-overlay">
+		<div id="js-preloader" class="preloader">
+			<div class="preloader-inner fadeInUp">
+				<div class="pong-loader"></div>
+				<svg role="img" class="df-icon df-icon--preloader-arcade">
+					<use xlink:href="../assets/img/necromancers.svg#preloader-arcade"/>
+				</svg>
+			</div>
+		</div>
+	</div>
+
+	<!-- The cursor elements -->
+	<div class="df-custom-cursor-wrap">
+		<div id="df-custom-cursor"></div>
+	</div>
+
+	<!-- Javascript Files
+	================================================== -->
+	<!-- Core JS -->
+	<script src="../assets/vendor/jquery/jquery.min.js"></script>
+	<script src="../assets/vendor/jquery/jquery-migrate.min.js"></script>
+	<script src="../assets/vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+	<script src="../assets/js/core.js"></script>
+	
+	<!-- Vendor JS -->
+	
+	<!-- Template JS -->
+	<script src="../assets/js/init.js"></script>
+	<script src="../assets/js/custom.js"></script>
+	
+	<!-- Duotone SVG color filter -->
+	<svg xmlns="http://www.w3.org/2000/svg" class="svg-filters">
+		<filter id="duotone_base">
+			<feColorMatrix type="matrix" result="grayscale"
+				values="1 0 0 0 0
+								1 0 0 0 0
+								1 0 0 0 0
+								0 0 0 1 0" />
+			<feComponentTransfer color-interpolation-filters="sRGB" result="duotone_base_filter">
+				<feFuncR type="table" tableValues="0.082352941176471 0.419607843137255"></feFuncR>
+				<feFuncG type="table" tableValues="0.090196078431373 0.443137254901961"></feFuncG>
+				<feFuncB type="table" tableValues="0.125490196078431 0.6"></feFuncB>
+				<feFuncA type="table" tableValues="0 1"></feFuncA>
+			</feComponentTransfer>
+		</filter>
+	</svg>
+
+
+	<!-- Snipcart Container (must be before </body>) -->
+	<script>
+	  window.SnipcartSettings = {
+	    publicApiKey: "NTQ2YzQ4NzItYmZlOS00OWQyLWE3YWYtNTkyMmY2NzlhMzFhNjM5MTE2MzUwOTYzODMxMDQ4",
+	    loadStrategy: "on-user-interaction",
+	    modalStyle: "side",
+	    currency: "usd",
+	    version: "3.7.1"
+	  };
+	  (function(){var c,d;(d=(c=window.SnipcartSettings).version)!=null||(c.version="3.0");var s,S;(S=(s=window.SnipcartSettings).timeoutDuration)!=null||(s.timeoutDuration=2750);var l,p;(p=(l=window.SnipcartSettings).domain)!=null||(l.domain="cdn.snipcart.com");var w,u;(u=(w=window.SnipcartSettings).protocol)!=null||(w.protocol="https");var m,g;(g=(m=window.SnipcartSettings).loadCSS)!=null||(m.loadCSS=!0);var y=window.SnipcartSettings.version.includes("v3.0.0-ci")||window.SnipcartSettings.version!="3.0"&&window.SnipcartSettings.version.localeCompare("3.4.0",void 0,{numeric:!0,sensitivity:"base"})===-1,f=["focus","mouseover","touchmove","scroll","keydown"];window.LoadSnipcart=o;document.readyState==="loading"?document.addEventListener("DOMContentLoaded",r):r();function r(){window.SnipcartSettings.loadStrategy?window.SnipcartSettings.loadStrategy==="on-user-interaction"&&(f.forEach(function(t){return document.addEventListener(t,o)}),setTimeout(o,window.SnipcartSettings.timeoutDuration)):o()}var a=!1;function o(){if(a)return;a=!0;var t=document.getElementsByTagName("head")[0],n=document.createElement("script");n.src=window.SnipcartSettings.protocol+"://"+window.SnipcartSettings.domain+"/themes/v"+window.SnipcartSettings.version+"/default/snipcart.js";n.async=!0;t.appendChild(n);var i=document.createElement("link");i.rel="stylesheet";i.type="text/css";i.href=window.SnipcartSettings.protocol+"://"+window.SnipcartSettings.domain+"/themes/v"+window.SnipcartSettings.version+"/default/snipcart.css";t.appendChild(i)}})();
+	</script>
+</body>
+
+</html>
